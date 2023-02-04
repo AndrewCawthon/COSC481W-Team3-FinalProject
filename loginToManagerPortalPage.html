@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <!-- Andrew Cawthon -->
-<!-- This site allows for the managers/admins to login using their accounts  -->
+<!-- This site allows for the managers/admins to login using their accounts As of 02/04/2023 the links for the options only go to index.html. Will change this as the other forms/pages become available in the main branch.  -->
 <html>
 
 <head>
     <style>
-    h1{
-    text-align: center;
-    }
+        h1 {
+            text-align: center;
+        }
 
-    h3{
-    text-align: right;
-    }
-    .label2{
-    text-align: center;
+        h3 {
+            text-align: right;
+        }
 
-    }
+        .div1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .div2 {
+            text-align: center;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+        }
+
+        div.container {
+            text-align: center;
+        }
+
+        ul.options {
+            list-style-type: none;
+            display: inline-block;
+            text-align: left;
+        }
     </style>
     <title>Manager Portal</title>
 
 </head>
 
-<body>
-    <h1>Login To Manager Portal</h1> 
-    <form>
-        
+<body background="./images/pictureOfFries.jpg">
+    <h1>Login To Manager Portal</h1>
+    <form action="process.php" method="post">
+        <div class="div1">
             <label>Employee Number</label>
-            <input type="text" name="firstName">
-            <br>
-            <label class="label2" >Password</label>
-            <input type="text" name="password">
-        <br>
-            <input type="submit">
+            <input type="text" name="managerNumber" />
+        </div>
+        <div class="div1">
+            <label>Password</label>
+            <input type="text" name="managerPassword" /> <br><br>
+            <input text-align="right" type="submit" name="submit" value="Submit"> <br>
+        </div>
     </form>
-
-    <br>
-    <br>
-    <br>
-    
-    <h3 class="right">FAQ</h3>
+    <div class="container">
+        <ul class="options">
+            <li><a href=index.html>Forgot Password?</a></li>
+            <li><a href=index.html>First time user?</a></li>
+            <li><a href=index.html>Employee Login</a></li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <h3 class="right">FAQ</h3>
 </body>
-
 </html>
