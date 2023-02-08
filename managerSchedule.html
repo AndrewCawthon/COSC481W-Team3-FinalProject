@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<!-- Author: Nathan Zimmer -->
+<!-- Function: admin/manager scheduling page. admins can view and edit all employee schedules from this page-->
+<!-- this page will need to be redone and the schedule table will need to be replaced by an image-->
+<html>
+<head>
+    <title>Manager Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="managerSchedule.js"></script>
+
+    <style>
+        #weeklyCal {
+            padding-top: 1%;
+            padding-bottom: 1%;
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: white;
+        }
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            border: 1px solid;
+        }
+        th {
+            border: 1px solid;
+        }
+        td {
+            border-left: 1px solid;
+            border-right: 1px solid;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button style="width:100px; height:30px">Back</button>
+    <div id="weeklyCal">
+        <button style="float:right; width:150px; height:30px" onclick="changeWeek()" id="weekButton">Next Week -></button>
+        <table id="cal">
+            <script>createHeader()</script>
+            <script>updateHeader(true)</script>
+            <script>createRows()</script>
+        </table>
+        <button style="width:150px; height:30px; margin-top: 5px;">Update Schedule</button>
+    </div>
+</body>
+</html>
