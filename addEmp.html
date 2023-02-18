@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add New Employee</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body onload="loadEmployees()">
+
+  <div class="container">
+
+
+    <div id="edit-page" class="page">
+      <div>
+        <span class="border-back-btn"><button class="back-btn" onclick="openHome()">X</button></span>
+        <h1>Add New Employee</h1>
+      </div>
+
+      <div class="wrapper">
+        <div class="flex">
+          <div class="block">
+            <label>First Name:</label><input type="text" id="fname"/>
+          </div>
+
+          <div class="block">
+            <label>Last Name:</label><input type="text" id="lname"/>
+          </div>
+
+          <div class="block">
+            <label>Admin?</label><input type="text" id="isAdmin"/>
+          </div>
+
+          <div class="block">
+            <label>Employee #:</label><input type="text" id="employeeNo"/>
+          </div>
+
+          <div class="block">
+            <label>Phone No.:</label><input type="text" id="phoneNo"/>
+          </div>
+
+          <div class="block">
+            <label>Email:</label><input type="text" id="email"/>
+          </div>
+
+
+        </div>
+        <button class="btn" onclick="addNewEmployee()">Add Changes</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
