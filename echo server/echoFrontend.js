@@ -5,7 +5,8 @@ const webSocketLocation = "ws:Localhost:18083";
 function onSubmit() {
     let inputField = document.getElementById("ClientInput");
     json = JSON.stringify({
-        message : inputField.value
+        command: "echo",
+        message: inputField.value
     })
     console.log(`message to server: ${json}`);
     socket.send(json);
