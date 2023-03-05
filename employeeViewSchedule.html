@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- edited by Cecilia: will simply make it so an image can be pulled from the DB once it's able to be stored -->
 <html>
 <head>
     <title>View Published Schedules</title>
@@ -56,12 +57,12 @@
     <button>Back</button>
     <form action="schedule.html" method="post">
         <select name="schedule">
-            <option value="schedule1">Week 1</option>
-            <option value="schedule2">Week 2</option>
-            <option value="schedule3">Week 3</option>
+            <option value="schedule1">Current Week</option>
+            <option value="schedule2">Next Week</option>
         </select>
         <input type="submit" value="Submit">
     </form>
+	<!--
     <h2>View Schedule</h2>
     <table border="1">
         <tr>
@@ -105,5 +106,9 @@
             <td>5:00 PM</td>
         </tr>
     </table>
+	-->
+	<div id="schedule">
+		<p> pending on working DB to pull schedule </p>
+	</div>
 </body>
 </html>

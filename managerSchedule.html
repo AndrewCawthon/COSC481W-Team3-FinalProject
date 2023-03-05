@@ -2,11 +2,13 @@
 <!-- Author: Nathan Zimmer -->
 <!-- Function: admin/manager scheduling page. admins can view and edit all employee schedules from this page-->
 <!-- this page will need to be redone and the schedule table will need to be replaced by an image-->
+<!-- edit done by Cecilia: replacing table with image -->
 <html>
 <head>
     <title>Manager Schedule</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="managerSchedule.js"></script>
+    <!-- 
+	<script src="managerSchedule.js"></script>
 
     <style>
         #weeklyCal {
@@ -31,17 +33,26 @@
             height: 30px;
         }
     </style>
+	-->
 </head>
 <body>
-    <button style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Back</button>
+    <button style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
     <div id="weeklyCal">
-        <button style="float:right; width:150px; height:30px" onclick="changeWeek()" id="weekButton">Next Week -></button>
-        <table id="cal">
+        <button style="float:right; width:150px; height:30px" onclick="location.href = 'managerScheduleNextWeek.html'" id="weekButton">Next Week -></button>
+        <!--
+		<table id="cal">
             <script>createHeader()</script>
             <script>updateHeader(true)</script>
             <script>createRows()</script>
         </table>
-        <button style="width:150px; height:30px; margin-top: 5px;">Update Schedule</button>
+		-->
+        <div id="cal">
+			<!-- need to add the code to make the image submitting functional. 
+			https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
+			-->
+		</div>
+		<button style="width:150px; height:30px; margin-top: 5px;">Update Schedule</button> <!-- this button will be updated
+		need to connect it to the new script for the schedule -->
     </div>
 </body>
 </html>
