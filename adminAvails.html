@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Availability Requests</title>
+    <style>
+        *{
+            text-decoration: none;
+            padding: 5;
+        }
+        a {
+            color: blue;
+			text-decoration: underline;
+        }
+		a:hover {
+			text-decoration: none;
+		}
+        header{
+            height: 70px;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 1px black solid;
+            background-color: rgb(252, 251, 251);
+        }
+        .imgs{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (max-width: 480px) {}  
+    </style>
+</head>
+<body>
+	<button style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
+    <h1>Availability Requests</h1>
+    <h3>Have to submit changes before leaving page</h3>
+	<div id="availsPending">
+		<form action="/adminAvails.html" method="post"> 
+			<table id="avails">
+				<script>createHeader()</script>
+				<script>updateHeader(true)</script>
+				<script>createRows()</script>
+				<!-- will have to use JS to list all the requests with their respective available actions 
+				will also have to remember to color code them based on status-->
+			</table>
+			<br>
+			<input type="submit" value="Submit Changes">
+		</form>
+	</div>
+</body>
+</html>
