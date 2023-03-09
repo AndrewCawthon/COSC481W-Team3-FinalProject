@@ -4,71 +4,32 @@
 <html>
 
 <head>
-    <style>
-        h1 {
-            text-align: center;
-        }
-
-        h3 {
-            text-align: right;
-        }
-
-        .div1 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .div2 {
-            text-align: center;
-        }
-
-        p {
-            margin: 0;
-            padding: 0;
-        }
-
-        label {
-            display: inline-block;
-            width: 150px;
-            text-align: right;
-        }
-
-        div.container {
-            text-align: center;
-        }
-
-        ul.options {
-            list-style-type: none;
-            display: inline-block;
-            text-align: left;
-        }
-    </style>
     <title>Manager Login</title>
+    <link rel="stylesheet" href="css/FormTemplate1.css">
 
 </head>
 
-<body background="./images/pictureOfFries.jpg">
-    <h1>Login To Manager Portal</h1>
-    <form action="process.php" method="post">
-        <div class="div1">
-            <label>Employee Number</label>
-            <input type="text" name="managerNumber" />
-        </div>
-        <div class="div1">
-            <label>Password</label>
-            <input type="text" name="managerPassword" /> <br><br>
-            <input text-align="right" type="submit" name="submit" value="Submit"> <br>
-        </div>
-    </form>
-    <div class="container">
-        <ul class="options">
-            <li><a href=resetPassword.html>Forgot Password?</a></li> <!-- Cecilia: added the right link -->
-            <!-- <li><a href=index.html>First time user?</a></li> Cecilia: decided this link was not necessary -->
-            <li><a href=index.html>Employee Login</a></li>
-        </ul>
-        <br>
-        <br>
-        <br>
-        <h3 class="right">FAQ</h3>
+<body>
+    <div class = "main">
+        <h1>Login To Manager Portal</h1>
+        <form action="process.php" method="post">
+        
+                <input type="text" name="managerNumber" value="Employee#" /> <br><br>
+                <input type="text" name="managerPassword" value="Password" /> <br><br>
+                <input class = "inputStyle" text-align="right" type="submit" name="submit" value="Submit"> <br><br>
+            
+        </form>
+                <a href=resetPassword.html>Forgot Password?</a> <br>
+                <a href=index.html>Employee Login</a>
+            <br>
+            <br>
+            <br>
+    </div>
+    <div class = "FAQ">
+
+        <div class = "content"> <p><a href="FAQ.html"> FAQ </a></p></div>
+        <img src="burger.gif" alt="burger">
+
+    </div>
 </body>
 </html>
