@@ -1,3 +1,5 @@
+<!-- edited by Cecilia. added working links -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,39 +19,43 @@
 
     <div id="edit-page" class="page">
       <div>
-        <span class="border-back-btn"><button class="back-btn" onclick="openHome()">X</button></span>
+        <button style="width:100px; height:30px" onclick="location.href = 'manageEmp.html'">Back</button>
         <h1>Add New Employee</h1>
       </div>
 
       <div class="wrapper">
         <div class="flex">
           <div class="block">
-            <label>First Name:</label><input type="text" id="fname"/>
+            <label>First Name: </label><input type="text" id="fname"/>
           </div>
 
           <div class="block">
-            <label>Last Name:</label><input type="text" id="lname"/>
+            <label>Last Name: </label><input type="text" id="lname"/>
           </div>
 
           <div class="block">
-            <label>Admin?</label><input type="text" id="isAdmin"/>
+            <label for="admin?">Admin? </label>
+			<select id="admin?" name="admin?">
+				<option value="false">No</option>
+				<option value="true">Yes</option>
+			</select>
           </div>
 
           <div class="block">
-            <label>Employee #:</label><input type="text" id="employeeNo"/>
+            <label>Employee #: </label><input type="text" id="employeeNo"/>
           </div>
 
           <div class="block">
-            <label>Phone No.:</label><input type="text" id="phoneNo"/>
+            <label>Phone No.: </label><input type="text" id="phoneNo"/>
           </div>
 
           <div class="block">
-            <label>Email:</label><input type="text" id="email"/>
+            <label>Email: </label><input type="text" id="email"/>
           </div>
 
 
         </div>
-        <button class="btn" onclick="addNewEmployee()">Add Changes</button>
+        <button class="btn" onclick="addNewEmployee()">Add Employee</button>
       </div>
 
     </div>

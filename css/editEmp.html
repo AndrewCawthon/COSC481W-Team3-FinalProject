@@ -17,7 +17,7 @@
 
     <div id="edit-page" class="page">
       <div>
-        <button style="width:100px; height:30px" onclick="location.href = 'manageEmp.html'">Back</button>
+        <span class="border-back-btn"><button class="back-btn" onclick="openHome()">X</button></span>
         <h1>Edit Employee</h1>
       </div>
 
@@ -32,11 +32,7 @@
           </div>
 
           <div class="block">
-            <label for="admin?">Admin? </label>
-			<select id="admin?" name="admin?">
-				<option value="false">No</option>
-				<option value="true">Yes</option>
-			</select>
+            <label>Admin?</label><input type="text" id="isAdmin"/>
           </div>
 
           <div class="block">

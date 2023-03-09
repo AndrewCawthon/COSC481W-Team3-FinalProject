@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Time Off</title>
+    <style>
+        *{
+            text-decoration: none;
+            padding: 5;
+        }
+        a {
+            color: blue;
+			text-decoration: underline;
+        }
+		a:hover {
+			text-decoration: none;
+		}
+        header{
+            height: 70px;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 1px black solid;
+            background-color: rgb(252, 251, 251);
+        }
+        .imgs{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (max-width: 480px) {}  
+    </style>
+</head>
+<body>
+	<button style="width:100px; height:30px" onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
+    <h1>Request Time Off Form</h1>
+    <h2>Fill out all fields</h2>
+	<div id="timeForm" style="float:center">
+		<form action="/adminRequests.html" method="post"> 
+			<label for="startD">From: </label>
+			<input type="date" id="startD" name="startD">
+			<label for="endD">To: </label>
+			<input type="date" id="endD" name="endD">
+			<p>Reason: </p>
+			<textarea name="reason" style="width:600px; height:200px;">Reason for taking time off is...</textarea>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>

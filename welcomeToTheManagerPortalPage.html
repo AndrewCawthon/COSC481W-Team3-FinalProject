@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!-- Andrew Cawthon -->
 <!-- The buttons allow for the managers to navigate to the necessary functions they need to managing employees. Viewing all employees availabilities, time off requests, and modifying/publishing the schedules for employees.  -->
+
+<!-- Cecilia -->
+<!-- Adding the right links  -->
 <html>
 
 <head>
@@ -62,14 +65,14 @@
     <h2>User Options</h2>
     <h1>Welcome to the Manager Portal</h1>
 
-    <button class="button manageemployeesbutton">Manage Employees</button>
-    <button class="button viewemployeesavailabilitiesbutton">View All Employee's Availabilities</button>
+    <button class="button manageemployeesbutton" onclick="location.href = 'manageEmp.html'">Manage Employees</button>
+    <button class="button viewemployeesavailabilitiesbutton" onclick="location.href = 'adminAvails.html'">View All Employee's Availabilities</button>
     <br>
     <br>
     <br>
     <br>
-    <button class="button viewtimeoffrequestsbutton">View (Pending) Time Off</button>
-    <button class="button editpublishschedulesbutton">Edit or Publish Schedules</button>
-    <h3 class="right">FAQ</h3>
+    <button class="button viewtimeoffrequestsbutton" onclick="location.href = 'adminRequests.html'">View (Pending) Time Off</button>
+    <button class="button editpublishschedulesbutton" onclick="location.href = 'managerSchedule.html'">Edit or Publish Schedules</button>
+    <h3 class="right"><a href="FAQ.html">FAQ</a></h3>
 </body>
 </html>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!-- Andrew Cawthon -->
 <!-- The buttons allow for the employee to view published schdules, change availability or request time off  -->
+
+<!-- Cecilia -->
+<!-- Adding the right links  -->
 <html>
 
 <head>
@@ -55,13 +58,13 @@
     <h2>User Options</h2>
     <h1>Welcome to the Employee Portal</h1>
 
-    <a href="schedule.html"><button class="button viewpublishedschedulesbutton">View Published Schedules</button></a>
-    <a href="mainEmployeePortalPage.html"><button class="button changeavailabilitybutton">Change Availability</button></a>
+    <button class="button viewpublishedschedulesbutton" onclick="location.href = 'employeeViewSchedule.html'">View Published Schedules</button>
+    <button class="button changeavailabilitybutton" onclick="location.href = 'employeeChangeAvail.html'">Change Availability</button>
     <br>
     <br>
     <br>
-    <a href="mainEmployeePortalPage.html"><button class="button requesttimeoffbutton">Request Time Off</button></a>
-    <h3 class="right">FAQ</h3>
+    <button class="button requesttimeoffbutton" onclick="location.href = 'employeeRequest.html'">Request Time Off</button>
+    <h3 class="right"><a href="FAQ.html">FAQ</a></h3>
 </body>
 
 </html>
