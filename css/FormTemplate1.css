@@ -16,21 +16,21 @@
             input{
                 background-color: rgba(219, 219, 26, 0.982);
                 color: gray;
-                width: 155px;
+                width: 14%;
                 height: 26px;
-                font-size: 22px;
+                font-size: 2vw;
             }
             h1{
-                font-size: 70px;
+                font-size: 5vw;
                 font-family: monospace;
                 font-weight: 30;
             }
             .inputStyle{
-                width: 250px;
-                height: 45px;
+                width: 20%;
+                height: 281.25%;
                 color: black;
                 border-radius: 12px;
-                font-size: 25px;
+                font-size: 2vw;
                 background-color: rgb(249, 249, 85);
             }
             .FAQ{
