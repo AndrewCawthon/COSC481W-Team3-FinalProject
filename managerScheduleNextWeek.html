@@ -7,17 +7,22 @@
 <head>
     <title>Manager Schedule</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
 </head>
+	
 <body>
-    <button style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
-    <div id="weeklyCal">
-        <button style="float:left; width:150px; height:30px" onclick="location.href = 'managerSchedule.html'" id="weekButton">&lt;- Current Week</button>
-        <div id="cal">
+     <button class='btn' style="width:100px; height:30px; margin-top: 10px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
+    <h1 id='h1'>Next Week's Schedule</h1>
+	<div id="weeklyCal">
+       <button class='btn' style='padding:7px; height:initial; margin-top: 0px; margin-left:100px; color:white; background-color: orangered'
+            style="float:left; width:150px; height:30px" onclick="location.href = 'managerSchedule.html'" id="weekButton">&lt;- Current Week</button>
+        <div id="cal" style='width:70%; height: 300px; margin: 5px auto; text-align:center; background-color: grey;'>
 			<!-- need to add the code to make the image submitting functional. 
 			https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
 			-->
 		</div>
-		<button style="width:150px; height:30px; margin-top: 5px;">Update Schedule</button> <!-- this button will be updated
+		<button class='btn' style="margin-top: 5px;position: absolute;right: 20px;top: 350px;padding:20px; height:initial; margin-top: 0px; margin-left:0px; color:white; background-color: orangered">Update Schedule</button>
+		<!-- this button will be updated
 		need to connect it to the new script for the schedule -->
     </div>
 </body>
