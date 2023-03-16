@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manage Employees</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body onload="loadEmployees()">
+
+  <div class="container">
+
+    <div id="home-page" class="page">
+	<button style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortal.html'">Back</button>
+      <h1>Manage Employees</h1>
+      <div class="wrapper">
+        <div id="employee-list">
+          <!-- <div class="employee-entry">
+            <span class="border-btn"><button class="edit-btn" onclick="openEditAdd('edit-page')">X</button></span>
+            <span class="employee-name">Name of Employee</span>
+          </div> -->
+
+        </div>
+        <button class="btn" onclick="openAdd()">Add New Employee</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

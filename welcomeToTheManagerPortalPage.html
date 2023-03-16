@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Andrew Cawthon -->
+<!-- The buttons allow for the managers to navigate to the necessary functions they need to managing employees. Viewing all employees availabilities, time off requests, and modifying/publishing the schedules for employees.  -->
+
+<!-- Cecilia -->
+<!-- Adding the right links  -->
+<html>
+
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: right;
+        }
+
+        h3 {
+            text-align: right;
+        }
+
+        .button {
+            border: none;
+            color: black;
+            background-color: #FFD94F;
+            border-radius: 4px;
+            padding: 13px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 300px;
+            height: 150px;
+        }
+
+        .manageemployeesbutton {
+            position: relative;
+            /* left: 550px; */
+        }
+
+        .viewemployeesavailabilitiesbutton {
+            position: relative;
+            /* left: 650px; */
+        }
+
+        .viewtimeoffrequestsbutton {
+            position: relative;
+            /* left: 550px; */
+        }
+
+        .editpublishschedulesbutton{
+            position: relative;
+           /* left: 650px; */
+        }
+
+    </style>
+    <title>Managers Portal</title>
+     <link rel='stylesheet' href='style.css' />
+
+</head>
+
+<body background="./images/pictureOfFries.jpg">
+    <h2>User Options</h2>
+    <h1>Welcome to the Manager Portal</h1>
+    
+        <div style='display: flex; justify-content: space-between; width: 70%; margin: 0px auto; margin-top:-50px;'>
+        <button class="btn button manageemployeesbutton" onclick="location.href = 'manageEmp.html'">Manage Employees</button>
+        <button class="btn button viewemployeesavailabilitiesbutton" onclick="location.href = 'adminAvails.html'">View All Employee's Availabilities</button>
+    </div>
+    <div style='display: flex; justify-content: space-between; width: 70%; margin: 0px auto;'>
+        <button class="btn button viewtimeoffrequestsbutton" onclick="location.href = 'adminRequests.html'">View (Pending) Time Off</button>
+        <button class="btn button editpublishschedulesbutton" onclick="location.href = 'managerSchedule.html'">Edit or Publish Schedules</button>
+    </div>
+    <h3 class="right">
+        <a href="FAQ.html">FAQ</a>
+        <img src="burger.gif" alt="" class='burger-gif'>
+    </h3>
+</body>
+
+</html>
