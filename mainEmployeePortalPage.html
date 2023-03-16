@@ -3,7 +3,7 @@
 <!-- The buttons allow for the employee to view published schdules, change availability or request time off  -->
 
 <!-- Cecilia -->
-<!-- Adding the right links  -->
+<!-- Adding the right links, also added User Options Menu  -->
 <html>
 
 <head>
@@ -49,14 +49,50 @@
             position: relative;
             /* left: 350x; */
         }
+		
+		.logout {
+		  display: none;
+		}
+
+		.authenticated .logout {
+		  display: block;
+		}
+		
+		ul {
+		  list-style-type: none;
+		  margin: 15px;
+		  padding: 15px;
+		}
+		
+		li {
+			display: inline;
+			padding: 5%;
+			font-size: 18px;
+		}
+
     </style>
     <title>Employee Portal</title>
      <link rel='stylesheet' type='text/css' href='style.css'>
+	<script>
+		var isAuthenticated = document.cookie.indexOf("authenticated=true") >= 0;
 
+		if (isAuthenticated) {
+		  document.body.className += " authenticated";
+		}
+	</script>
 </head>
 
 <body background="./images/pictureOfFries.jpg">
-    <h2>User Options</h2>
+	<div class='user_opts'>
+			<ul>
+				<li><img src="./images/frybox.png" alt="Fry Box" width="72" height="87.5"></li>
+				<li><a href="ChangePassword.html">Change Password</a></li>
+				<li><a href="/logout" class="logout">Log Out</a></li> <!-- PLEASE DONT CLICK THIS BUTTON YET -->
+				<li><img src="./images/fries.png" alt="Spilling Fries" width="72" height="87.5"></li>
+			</ul>
+		</li>
+	</div>
+	
     <h1 id='h1'>Welcome to the Employee Portal</h1>
 
     <button class="btn button viewpublishedschedulesbutton" onclick="location.href = 'employeeViewSchedule.html'">View Published Schedules</button>
