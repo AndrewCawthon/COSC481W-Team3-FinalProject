@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel='stylesheet' href='style.css'>
     <title>Change Availability</title>
     <style>
         *{
@@ -35,12 +36,16 @@
     </style>
 </head>
 <body>
-	<button style="width:100px; height:30px" onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
-    <h1>Change Availability Form</h1>
-    <h3>Select earliest start time and latest end time for each day</h3>
-	<h3>If not available on a day, do not make a selection (or select 12 AM)</h3>
+		<div class="top">
+		<button class='btn' style="width:100px; height:30px; margin-top: 10px" onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
+		<h1>Change Availability Form</h1>
+		<ul style="width: 400px;font-size: 20px;">
+			<li>Select earliest start time and latest end time for each day</li>
+			<li>If not available on a day, do not make a selection (or select 12 AM)</li>
+		</ul>
+	</div>
 	<div id="availForm">
-		<form action="/adminAvails.html" method="post"> 
+		<form action="/adminAvails.html" method="post">
 			<fieldset style="float:left">
 				<legend>Earliest Start Time:</legend>
 				<label>Sunday: </label>
@@ -63,9 +68,9 @@
 				<br>
 				<label>Saturday: </label>
 				<input type="time" id="SatST">
-		   </fieldset>
-		   
-		   <fieldset style="float:left">
+			</fieldset>
+
+			<fieldset style="float:left">
 				<legend>Latest End Time:</legend>
 				<label>Sunday: </label>
 				<input type="time" id="SunET">
@@ -87,16 +92,17 @@
 				<br>
 				<label>Saturday: </label>
 				<input type="time" id="SatET">
-		   </fieldset>
-    
-			<fieldset style="float:left">
-				<legend>Date to take effect:</legend>
-				<input type="date" id="AvailSD">
 			</fieldset>
-  
+
+			<fieldset style="float:left;margin-top: 100px;float:left;margin-left: 30px;font-size: 30px;">
+				<legend>Date to take effect:</legend>
+				<input type="date" id="AvailSD" style='width: 200px'>
+			</fieldset>
+
 			<br>
-			<input type="submit" value="Submit">
+			<input class='btn' type="submit" value="Submit" style='font-size:24px; padding:20px; height:initial; margin-top: 70px; margin-left:140px; color:white; background-color: orangered'>
 		</form>
 	</div>
 </body>
+
 </html>
