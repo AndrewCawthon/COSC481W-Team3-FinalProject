@@ -146,3 +146,69 @@ input {
   margin-top: -30px;
   transform: scale(2);
 }/*# sourceMappingURL=style.css.map */
+
+
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+.top h1{
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  width: 500px;
+}
+#availForm{
+  width: 90%;
+  margin: 20px auto;
+}
+#availForm fieldset, #availForm label {
+  color: white;
+}
+#availForm fieldset label{
+  font-size: 24px;
+}
+#availForm fieldset input{
+  font-size: 24px;
+  padding: 7px;
+  margin: 2px;
+}
+
+
+.button {
+    width: 350px;
+    padding: 20px;
+    font-size: 27px;
+    height: 120px;
+}
+#h1{
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+#request img{
+  width: 50%;
+  height: 400px;
+  margin: 7px;
+}
+#request{
+  display: flex;
+  justify-content: center;
+}
+#request label, #request p{
+  color: white;
+  font-size: 24px;
+}
+#request input{
+  font-size: 24px;
+  padding: 7px;
+  margin: 4px;
+  width: 200px;
+}
+#request textarea{
+  width: 300px;
+  height: 100px;
+  margin-top: -30px;
+}

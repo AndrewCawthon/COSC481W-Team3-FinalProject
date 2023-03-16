@@ -37,34 +37,37 @@
 
         .viewpublishedschedulesbutton {
             position: relative;
-            left: 550px;
+            /* left: 150x; */
         }
 
         .changeavailabilitybutton {
             position: relative;
-            left: 650px;
+            /* left: 250x; */
         }
 
         .requesttimeoffbutton {
             position: relative;
-            left: 750px;
+            /* left: 350x; */
         }
     </style>
     <title>Employee Portal</title>
+     <link rel='stylesheet' type='text/css' href='style.css'>
 
 </head>
 
 <body background="./images/pictureOfFries.jpg">
     <h2>User Options</h2>
-    <h1>Welcome to the Employee Portal</h1>
+    <h1 id='h1'>Welcome to the Employee Portal</h1>
 
-    <button class="button viewpublishedschedulesbutton" onclick="location.href = 'employeeViewSchedule.html'">View Published Schedules</button>
-    <button class="button changeavailabilitybutton" onclick="location.href = 'employeeChangeAvail.html'">Change Availability</button>
-    <br>
-    <br>
-    <br>
-    <button class="button requesttimeoffbutton" onclick="location.href = 'employeeRequest.html'">Request Time Off</button>
-    <h3 class="right"><a href="FAQ.html">FAQ</a></h3>
+    <button class="btn button viewpublishedschedulesbutton" onclick="location.href = 'employeeViewSchedule.html'">View Published Schedules</button>
+    <button class="btn button changeavailabilitybutton" onclick="location.href = 'employeeChangeAvail.html'">Change Availability</button>
+    </div>
+    <div style='text-align: center'>
+        <button class="button btn requesttimeoffbutton" onclick="location.href = 'employeeRequest.html'">Request Time Off</button>
+    </div>
+    <h3 class="right">
+        <a href="FAQ.html">FAQ</a>
+    </h3>
 </body>
 
 </html>
