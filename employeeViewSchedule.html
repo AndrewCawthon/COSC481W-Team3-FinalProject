@@ -6,21 +6,21 @@
     <style>
         h1 {
             text-align: center;
-            background-color: aliceblue;
+            background-color: rgb(235, 35, 35);
             width: max-content;
             margin-left: auto;
             margin-right: auto;
         }
         h2 {
             text-align: center;
-            background-color: aliceblue;
+            background-color: rgb(235, 35, 35);
             width: max-content;
             margin-left: auto;
             margin-right: auto;
         }
         h3 {
             text-align: center;
-            background-color: aliceblue;
+            background-color: rgb(235, 35, 35);
             width: max-content;
             margin-left: auto;
             margin-right: auto;
@@ -50,17 +50,20 @@
             text-align: center;
         }
     </style>
+    <link rel='stylesheet' href='style.css'>
 </head>
+	
 <body background="./images/pictureOfFries.jpg">
-    <h1>Schedules</h1>
-    <h2>Choose a schedule to view</h2>
-    <button style="width:100px; height:30px" onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
+    <button class='btn' style="width:100px; height:30px; margin-top: 10px" onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
+    <h1 id='h1'>Schedules</h1>
+    <h2 style='color: white'>Choose a schedule to view</h2>
     <form action="schedule.html" method="post">
-        <select name="schedule">
+        <select name="schedule" style='padding: 7px'>
             <option value="schedule1">Current Week</option>
             <option value="schedule2">Next Week</option>
         </select>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class='btn' style='padding:7px; height:initial; margin-top: 0px; margin-left:0px; color:white; background-color:
+        orangered'>
     </form>
 	<!--
     <h2>View Schedule</h2>
@@ -107,7 +110,7 @@
         </tr>
     </table>
 	-->
-	<div id="schedule">
+	<div id="schedule" style='width:70%; height: 300px; margin: 5px auto; text-align:center; background-color: grey;'>
 		<p> pending on working DB to pull schedule </p>
 	</div>
 </body>
