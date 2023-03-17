@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Off Requests</title>
+    <script type="text/javascript" src="adminRequests.js"></script>
     <style>
         *{
             text-decoration: none;
@@ -31,6 +32,10 @@
             margin-left: auto;
             margin-right: auto;
         }
+        td {
+            padding-right: 10px;
+            text-align: center;
+        }
         @media screen and (max-width: 480px) {}  
     </style>
 </head>
@@ -41,14 +46,11 @@
 	<div id="requestsPending">
 		<form action="/adminRequests.html" method="post"> 
 			<table id="requests">
-				<script>createHeader()</script>
-				<script>updateHeader(true)</script>
-				<script>createRows()</script>
-				<!-- will have to use JS to list all the requests with their respective available actions 
-				will also have to remember to color code them based on status-->
+                <script>setTable("requests")</script>
+                <script>addRow()</script>
 			</table>
 			<br>
-			<input type="submit" value="Submit Changes">
+			<button type="submit" onclick="onSubmit()">Submit Changes</button>
 		</form>
 	</div>
 </body>
