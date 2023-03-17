@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <title> Set New Password </title>
-        <link rel="stylesheet" href="css/FormTemplate1.css">
-	</head>
-    <body>
-        <div class = "main">
-            <h1>Set New Password </h1>
 
-            <form>
-                <input type="text" id="pin" name="pin" value="Enter Pin"> <br> <br>
-                <input type="text" id="newPass" name="newPass" value="New Password"> <br> <br>
-                <input type="submit" id ="setNewPass" class = "inputStyle" value="Set New Password">
-            </form>
-        </div>
+<head>
+    <title> Set New Password </title>
+    <link rel="stylesheet" href="css/FormTemplate1.css">
+</head>
 
-        
-        <div class = "FAQ">
+<body>
+    <div class="FAQModified">
+        <p><a href="FAQ.html"> FAQ</a></p>
+    </div>
+    <div class="main">
+        <h1>Set New Password </h1>
 
-            <div class = "content"> <p> FAQ </p></div>
-            <img src="burger.gif" alt="burger">
+        <form>
+            <input type="text" id="pin" name="pin" value="Enter Pin"> <br> <br>
+            <input type="text" id="newPass" name="newPass" value="New Password"> <br> <br>
+            <input type="submit" id="setNewPass" class="inputStyle" value="Set New Password">
+        </form>
+    </div>
 
-        </div>
+    <div class="translate">
+        <br>
+        <div id="google_translate_element"></div>
 
-    </body>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+
+
+
+    <div class="FAQ">
+        <img src="burger.gif" alt="burger">
+    </div>
+
+</body>
+
 </html>

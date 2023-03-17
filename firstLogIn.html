@@ -1,35 +1,58 @@
 <!-- edited by Cecilia: removed provided password. made sure links worked. -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Login</title>
-    <style>       
-        @media screen and (max-width: 480px) {}  
+    <style>
+        @media screen and (max-width: 480px) {}
     </style>
     <link rel="stylesheet" href="css/FormTemplate1.css">
 </head>
+
 <body>
+    <div class="FAQModified">
+
+        <p><a href="FAQ.html"> FAQ</a></p>
+    </div>
     <div class="main">
         <h1>First Time Login</h1>
-        <form class="form" id="first_login" method="get" action="./php/firstLogIn.php">  
-            <input type="text" name="employeeID" class="form__input" autofocus="" placeholder="Employee ID"> <br><br>		
-			<!--
+        <form class="form" id="first_login" method="get" action="./php/firstLogIn.php">
+            <input type="text" name="employeeID" class="form__input" autofocus="" placeholder="Employee ID"> <br><br>
+            <!--
             <div class="form__input-group">
                 <input type="def_password" class="form__input" autofocus="" placeholder="Provided Password">
                 <div class="form__input-error-message"></div>
             </div>
 			-->
             <input type="password" name="password" class="form__input" autofocus="" placeholder="New Password"> <br><br>
-            <input type="submit" name="submit" id ="setpass" class = "inputStyle" value="Set password & Login"><br><br>
-            <a class="form__link" href="index.html">Not a First Time User?</a>       
+            <input type="submit" name="submit" id="setpass" class="inputStyle" value="Set password & Login"><br><br>
+            <a class="form__link" href="index.html">Not a First Time User?</a>
         </form>
     </div>
-    <div class = "FAQ">
-        <div class = "content"> <p><a href="FAQ.html"> FAQ</a></p></div>
+
+    <div class="translate">
+        <br>
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+    <div class="FAQ">
         <img src="burger.gif" alt="burger">
     </div>
 </body>
+
 </html>

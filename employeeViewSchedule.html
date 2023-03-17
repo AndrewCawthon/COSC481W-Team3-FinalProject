@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- edited by Cecilia: will simply make it so an image can be pulled from the DB once it's able to be stored -->
 <html>
+
 <head>
     <title>View Published Schedules</title>
     <style>
@@ -11,6 +12,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         h2 {
             text-align: center;
             background-color: rgb(235, 35, 35);
@@ -18,6 +20,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         h3 {
             text-align: center;
             background-color: rgb(235, 35, 35);
@@ -25,6 +28,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .button {
             border: none;
             color: black;
@@ -52,9 +56,10 @@
     </style>
     <link rel='stylesheet' href='style.css'>
 </head>
-	
+
 <body background="./images/pictureOfFries.jpg">
-    <button class='btn' style="width:100px; height:30px; margin-top: 10px" onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
+    <button class='btn' style="width:100px; height:30px; margin-top: 10px"
+        onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
     <h1 id='h1'>Schedules</h1>
     <h2 style='color: white'>Choose a schedule to view</h2>
     <form action="schedule.html" method="post">
@@ -65,7 +70,7 @@
         <input type="submit" value="Submit" class='btn' style='padding:7px; height:initial; margin-top: 0px; margin-left:0px; color:white; background-color:
         orangered'>
     </form>
-	<!--
+    <!--
     <h2>View Schedule</h2>
     <table border="1">
         <tr>
@@ -110,8 +115,27 @@
         </tr>
     </table>
 	-->
-	<div id="schedule" style='width:70%; height: 300px; margin: 5px auto; text-align:center; background-color: grey;'>
-		<p> pending on working DB to pull schedule </p>
-	</div>
+    <div id="schedule" style='width:70%; height: 300px; margin: 5px auto; text-align:center; background-color: grey;'>
+        <p> pending on working DB to pull schedule </p>
+    </div>
+
+    <div class="translate">
+        <br>
+        <br>
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
 </body>
+
 </html>

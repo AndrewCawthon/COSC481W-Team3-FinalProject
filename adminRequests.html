@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Off Requests</title>
     <style>
-        *{
+        * {
             text-decoration: none;
             padding: 5;
         }
+
         a {
             color: blue;
-			text-decoration: underline;
+            text-decoration: underline;
         }
-		a:hover {
-			text-decoration: none;
-		}
-        header{
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        div.translate {
+            text-align: center;
+        }
+
+        .outerTableDiv {
+            text-align: center;
+        }
+
+        .innerTableDiv {
+            display: inline-block;
+        }
+
+        header {
             height: 70px;
             width: 100%;
             position: fixed;
@@ -26,30 +42,57 @@
             border-bottom: 1px black solid;
             background-color: rgb(252, 251, 251);
         }
-        .imgs{
+
+        .imgs {
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
-        @media screen and (max-width: 480px) {}  
+
+        @media screen and (max-width: 480px) {}
     </style>
 </head>
+
 <body>
-	<button style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
-    <h1>Time Off Requests</h1>
-    <h3>Have to submit changes before leaving page</h3>
-	<div id="requestsPending">
-		<form action="/adminRequests.html" method="post"> 
-			<table id="requests">
-				<script>createHeader()</script>
-				<script>updateHeader(true)</script>
-				<script>createRows()</script>
-				<!-- will have to use JS to list all the requests with their respective available actions 
-				will also have to remember to color code them based on status-->
-			</table>
-			<br>
-			<input type="submit" value="Submit Changes">
-		</form>
-	</div>
+    <button style="width:100px; height:30px"
+        onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
+    <div class="outerTableDiv">
+        <h1>Time Off Requests</h1>
+        <h3>Have to submit changes before leaving page</h3>
+        <div class="innerTableDiv">
+            <div id="requestsPending">
+                <form action="/adminRequests.html" method="post">
+                    <table id="requests">
+                        <script>createHeader()</script>
+                        <script>updateHeader(true)</script>
+                        <script>createRows()</script>
+                        <!-- will have to use JS to list all the requests with their respective available actions 
+                            will also have to remember to color code them based on status-->
+                    </table>
+                    <br>
+                    <input type="submit" value="Submit Changes">
+                </form>
+            </div>
+            <br>
+            <div class="translate">
+                <br>
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

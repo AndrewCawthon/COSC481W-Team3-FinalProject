@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Availability Requests</title>
+    <link rel="stylesheet" href="css/styleForAdminAvails.css">
     <style>
-        div.adminAvailsDiv {
+        .adminAvailsDiv {
             text-align: center;
         }
 
-        div.translate {
+        .translate {
             text-align: center;
         }
 
@@ -70,21 +71,24 @@
             </form>
         </div>
     </div>
-
+    <br>
     <div class="translate">
         <br>
         <div id="google_translate_element"></div>
+
         <script type="text/javascript">
-          function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-              { pageLanguage: 'en' },
-              'google_translate_element'
-            );
-          }
-        </script> 
-    
-    
-      </div>
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+
 </body>
 
 </html>

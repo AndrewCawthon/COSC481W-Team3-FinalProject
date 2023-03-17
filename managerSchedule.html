@@ -1,9 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!-- Author: Nathan Zimmer -->
 <!-- Function: admin/manager scheduling page. admins can view and edit all employee schedules from this page-->
 <!-- this page will need to be redone and the schedule table will need to be replaced by an image-->
 <!-- edit done by Cecilia: replacing table with image -->
 <html>
+
 <head>
     <title>Manager Schedule</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,14 +35,16 @@
         }
     </style>
 	-->
-	<link rel='stylesheet' href='style.css' />
+    <link rel='stylesheet' href='style.css' />
 </head>
-	
+
 <body>
- <button class="btn" style="width:100px; height:30px; margin-top: 10px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
+    <button class="btn" style="width:100px; height:30px; margin-top: 10px"
+        onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
     <h1 id='h1'>Current Week</h1>
     <div id="weeklyCal">
-        <button class='btn' style='float:right; width:150px; height:30px; padding:7px; height:initial; margin-top: 0px; margin-left:100px; color:white; background-color: orangered'
+        <button class='btn'
+            style='float:right; width:150px; height:30px; padding:7px; height:initial; margin-top: 0px; margin-left:100px; color:white; background-color: orangered'
             onclick="location.href = 'managerScheduleNextWeek.html'" id="weekButton">Next Week -></button>
         <!--
 		<table id="cal">
@@ -50,15 +53,33 @@
             <script>createRows()</script>
         </table>
 	-->
-         <div id="cal" style='width:70%; height: 300px; margin: 5px auto; text-align:center; background-color: grey;'>
-			<!-- need to add the code to make the image submitting functional. 
+        <div id="cal" style='width:70%; height: 300px; margin: 5px auto; text-align:center; background-color: grey;'>
+            <!-- need to add the code to make the image submitting functional. 
 			https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
 			-->
-		</div>
-		<button class='btn' style='width:150px; height:30px; padding:20px; height:initial; top: 200px; margin-left:20px;
+        </div>
+        <button class='btn' style='width:150px; height:30px; padding:20px; height:initial; top: 200px; margin-left:20px;
         	color:white; background-color: orangered; position: absolute'>Update Schedule</button>
-	    	<!-- this button will be updated
+        <!-- this button will be updated
 		need to connect it to the new script for the schedule -->
     </div>
+    <div class="translate">
+        <br>
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+
 </body>
+
 </html>

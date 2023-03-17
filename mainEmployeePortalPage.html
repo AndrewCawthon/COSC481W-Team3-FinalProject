@@ -49,9 +49,13 @@
             position: relative;
             /* left: 350x; */
         }
+
+        .translate {
+            text-align: center;
+        }
     </style>
     <title>Employee Portal</title>
-     <link rel='stylesheet' type='text/css' href='style.css'>
+    <link rel='stylesheet' type='text/css' href='style.css'>
 
 </head>
 
@@ -59,16 +63,38 @@
     <h2>User Options</h2>
     <h1 id='h1'>Welcome to the Employee Portal</h1>
 
-    <button class="btn button viewpublishedschedulesbutton" onclick="location.href = 'employeeViewSchedule.html'">View Published Schedules</button>
-    <button class="btn button changeavailabilitybutton" onclick="location.href = 'employeeChangeAvail.html'">Change Availability</button>
+    <button class="btn button viewpublishedschedulesbutton" onclick="location.href = 'employeeViewSchedule.html'">View
+        Published Schedules</button>
+    <button class="btn button changeavailabilitybutton" onclick="location.href = 'employeeChangeAvail.html'">Change
+        Availability</button>
     </div>
     <div style='text-align: center'>
-        <button class="button btn requesttimeoffbutton" onclick="location.href = 'employeeRequest.html'">Request Time Off</button>
+        <button class="button btn requesttimeoffbutton" onclick="location.href = 'employeeRequest.html'">Request Time
+            Off</button>
     </div>
     <h3 class="right">
         <a href="FAQ.html">FAQ</a>
         <img src="burger.gif" alt="" class='burger-gif'>
     </h3>
+
+    <div class="translate">
+        <br>
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+
+
 </body>
 
 </html>
