@@ -1,25 +1,30 @@
 var table;
+var jsons;
+
+// gets the proper files from the database on page load 
+function onload() {
+    // using test data for now
+    jsons = [
+        {
+            name: "Nathan Zimmer",
+            details: "day x to day y for vacation or something",
+            status: 1
+        },
+        {
+            name: "Nathan Zimmer",
+            details: "because I don't want to work",
+            status: 0
+        }
+    ];
+}
 
 // sets the table that we will be using for the time off requests
 function setTable(tableName) {
     table = document.getElementById(tableName);
 }
 
-// takes a list of json files (formatted: name, details, status[approved/denied/empty]) 
+// takes a list of json files (formatted: name, details, status[0(undecided) or 1(approved) or 2(denied)]) and adds them to the table. Adds event listeners to the buttons
 function addRow() {
-
-    let jsons = [
-        {
-            name: "Nathan Zimmer",
-            details: "day x to day y for vacation or something",
-            status: "approved"
-        },
-        {
-            name: "Nathan Zimmer",
-            details: "because I don't want to work"
-        }
-    ];
-
     let counter = 0;
     jsons.forEach(json => {
         // creating new row element
@@ -37,29 +42,15 @@ function addRow() {
         row.appendChild(details);
 
 
-        // deciding if we have undo button or not
-        if (json.status == undefined) {
-            let approve = document.createElement("button");
-            approve.id = "approve" + counter;
-            approve.type = "button";
-            approve.textContent = "approve";
-            row.appendChild(approve);
-            approve.addEventListener("click", onApprove);
+        // if status is null, we need to choose a status
+        if (json.status == 0) {
+            addButton(row, "approve", "approve" + counter, onApprove);
 
-            let deny = document.createElement("button");
-            deny.id = "deny" + counter++;
-            deny.type = "button";
-            deny.textContent = "deny";
-            row.appendChild(deny);
-            deny.addEventListener("click", onDeny);
+            addButton(row, "deny", "deny" + counter++, onDeny);
         }
+        // if status has already been chosen we can undo it
         else {
-            let undo = document.createElement("button");
-            undo.id = "undo" + counter++;
-            undo.type = "button";
-            undo.textContent = "undo";
-            row.appendChild(undo);
-            undo.addEventListener("click", onUndo);
+            addButton(row, "undo", "undo" + counter++, onUndo);
         }
 
         // adding this row to the table
@@ -68,14 +59,74 @@ function addRow() {
 }
 
 function onApprove(event) {
-    console.log("approved!");
+    // deleting approve button 
+    let button = event.currentTarget;
+    let index = parseInt(button.id.at(-1));
+    let row = button.parentNode;
+    button.remove();
+
+    // deleting deny button
+    document.getElementById("deny" + index).remove();
+
+    // adding undo button
+    undo = addButton(row, "undo", "undo" + index, onUndo);
+
+    // updating json file
+    jsons[index].oldStatus = 0;
+    jsons[index].status = 1;
 }
 
 function onDeny(event) {
-    console.log("denied ):");
+    // deleting deny button 
+    let button = event.currentTarget;
+    let index = parseInt(button.id.at(-1));
+    let row = button.parentNode;
+    button.remove();
+
+    // deleting deny button
+    document.getElementById("approve" + index).remove();
+
+    // adding undo button
+    undo = addButton(row, "undo", "undo" + index, onUndo);
+
+    // updating json file
+    jsons[index].oldStatus = 0;
+    jsons[index].status = 2;
 }
 
 function onUndo(event) {
-    console.log("undone");
-    
+    // deleting undo button 
+    let button = event.currentTarget;
+    let index = parseInt(button.id.at(-1));
+    let row = button.parentNode;
+    button.remove();
+
+    // adding approve button
+    addButton(row, "approve", "approve" + index, onApprove);
+
+    // adding deny button
+    addButton(row, "deny", "deny" + index, onDeny);
+
+    // updating json file
+    jsons[index].oldStatus = jsons[index].status;
+    jsons[index].status = 0;
 }
+
+// adds a button with the specified params
+function addButton(row, text, id, listener) {
+    let button = document.createElement("button");
+    button.id = id;
+    button.type = "button";
+    button.textContent = text;
+    row.appendChild(button);
+
+    button.addEventListener("click", listener);
+    return button;
+}
+
+// submits all of the json files to the database
+function onSubmit() {
+    console.log("submitted");
+}
+
+onload();
