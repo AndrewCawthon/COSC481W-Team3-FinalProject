@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Andrew Cawthon -->
+<!-- The buttons allow for the employee to view published schdules, change availability or request time off  -->
+
+<!-- Cecilia -->
+<!-- Adding the right links  -->
+<html>
+
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: right;
+        }
+
+        h3 {
+            text-align: right;
+        }
+
+        .button {
+            border: none;
+            color: black;
+            background-color: #FFD94F;
+            border-radius: 4px;
+            padding: 13px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 300px;
+        }
+
+        .viewpublishedschedulesbutton {
+            position: relative;
+            /* left: 150x; */
+        }
+
+        .changeavailabilitybutton {
+            position: relative;
+            /* left: 250x; */
+        }
+
+        .requesttimeoffbutton {
+            position: relative;
+            /* left: 350x; */
+        }
+
+        .translate {
+            text-align: center;
+        }
+    </style>
+    <title>Employee Portal</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+
+</head>
+
+<body background="./images/pictureOfFries.jpg">
+    <h2>User Options</h2>
+    <h1 id='h1'>Welcome to the Employee Portal</h1>
+
+    <button class="btn button viewpublishedschedulesbutton" onclick="location.href = 'employeeViewSchedule.html'">View
+        Published Schedules</button>
+    <button class="btn button changeavailabilitybutton" onclick="location.href = 'employeeChangeAvail.html'">Change
+        Availability</button>
+    </div>
+    <div style='text-align: center'>
+        <button class="button btn requesttimeoffbutton" onclick="location.href = 'employeeRequest.html'">Request Time
+            Off</button>
+    </div>
+    <h3 class="right">
+        <a href="FAQ.html">FAQ</a>
+        <img src="burger.gif" alt="" class='burger-gif'>
+    </h3>
+
+    <div class="translate">
+        <br>
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+
+
+</body>
+
+</html>

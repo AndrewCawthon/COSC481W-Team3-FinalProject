@@ -1,0 +1,243 @@
+* {
+  font-family: Arial;
+}
+
+body {
+  background-color: #ff9a3c;
+}
+
+h1 {
+  margin: 10px 0px;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 90vh;
+  font-size: 25px;
+  color: white;
+}
+
+.page {
+  width: 700px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 400px 100px;
+  align-items: start;
+}
+
+.btn {
+  border: none;
+  height: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 25px;
+  padding-bottom: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+  margin-top: 100px;
+  margin-left: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #ffdb4e;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn:hover {
+  transform: translateY(-10px);
+}
+
+/* Back Button */
+.back-btn {
+  border: none;
+  margin: 0px 3px;
+  font-size: 30px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0px !important;
+  width: 30px;
+  color: white;
+  background-color: white;
+  -webkit-mask: url(./asset/turn-back.svg) no-repeat center;
+  mask: url(./asset/turn-back.svg) no-repeat center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.back-btn:hover {
+  transform: translateY(-10px);
+}
+
+.border-back-btn {
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #F36300;
+  font-size: 25px !important;
+  float: left;
+  margin-right: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Employee Entry Classes */
+.border-btn {
+  border: 3px solid #2f2f2f;
+  margin-right: 10px;
+}
+
+.edit-btn {
+  border: none;
+  margin: 0px 3px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  background-color: white;
+  -webkit-mask: url(./asset/edit-box-icon.svg) no-repeat center;
+  mask: url(./asset/edit-box-icon.svg) no-repeat center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.edit-btn:hover {
+  transform: translateY(-10px);
+}
+
+.employee-entry {
+  display: flex;
+  margin-top: 10px;
+}
+
+.employee-name {
+  border: 3px solid #2f2f2f;
+  padding: 5px;
+  flex-grow: 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Edit Employee */
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+  margin-right: 5px;
+  width: 170px;
+  font-size: 20px;
+}
+
+input {
+  background-color: rgb(237, 237, 237);
+  border: none;
+  width: 100px;
+}
+
+.delete label {
+  margin-right: 20px;
+  color: #000;
+}
+.delete input {
+  margin: 0px;
+  margin-top: -30px;
+  transform: scale(2);
+}/*# sourceMappingURL=style.css.map */
+
+.outerTableDiv{
+  text-align: center;
+}
+
+.innerTableDiv{
+  display: inline-block;
+}
+
+.centerAdminAvails{
+  text-align: center;
+  display: inline-block;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+.top h1{
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  width: 500px;
+}
+#availForm{
+  width: 90%;
+  margin: 20px auto;
+}
+#availForm fieldset, #availForm label {
+  color: white;
+}
+#availForm fieldset label{
+  font-size: 24px;
+}
+#availForm fieldset input{
+  font-size: 24px;
+  padding: 7px;
+  margin: 2px;
+}
+
+
+.button {
+    width: 350px;
+    padding: 20px;
+    font-size: 27px;
+    height: 120px;
+}
+#h1{
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+#request img{
+  width: 50%;
+  height: 400px;
+  margin: 7px;
+}
+#request{
+  display: flex;
+  justify-content: center;
+}
+#request label, #request p{
+  color: white;
+  font-size: 24px;
+}
+#request input{
+  font-size: 24px;
+  padding: 7px;
+  margin: 4px;
+  width: 200px;
+}
+#request textarea{
+  width: 300px;
+  height: 100px;
+  margin-top: -30px;
+}
+
+.FAQModified{
+  text-align: right;
+  position: absolute;
+  top: 25px;
+  right: 16px;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.translate{
+  text-align: center;
+}
+
+.adminAvailsDiv {
+  text-align: center;
+}
