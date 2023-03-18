@@ -33,23 +33,77 @@
         }
         @media screen and (max-width: 480px) {}  
     </style>
+	<link rel='stylesheet' href='style.css' />
 </head>
+	
 <body>
-	<button style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
-    <h1>Time Off Requests</h1>
-    <h3>Have to submit changes before leaving page</h3>
-	<div id="requestsPending">
-		<form action="/adminRequests.html" method="post"> 
-			<table id="requests">
+    <button class='btn' style="width:100px; height:30px; margin-top: 10px;" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
+    <h1 id='h1' style='width: 700px;'>Time Off Requests</h1>
+    <h3 style='color:white;text-align: center'>Have to submit changes before leaving page</h3>
+    <div id="requestsPending">
+        <form action="/adminRequests.html" method="post" style='display: flex; justify-content: center;'>
+            <table id="requests" style='width:60%' class='table'>
 				<script>createHeader()</script>
 				<script>updateHeader(true)</script>
 				<script>createRows()</script>
 				<!-- will have to use JS to list all the requests with their respective available actions 
 				will also have to remember to color code them based on status-->
-			</table>
-			<br>
-			<input type="submit" value="Submit Changes">
-		</form>
-	</div>
+ <tr>
+                    <th class='green'>Name</th>
+                    <th class='green'>Details</th>
+                </tr>
+                <tr>
+                    <td class='green'>Sample</td>
+                    <td class='green'>Sample</td>
+                    <td>
+                        <img src="undo.png" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class='green'>Sample</td>
+                    <td class='green'>Sample</td>
+                    <td>
+                        <img src="undo.png" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class='yellow'>Sample</td>
+                    <td class='yellow'>Sample</td>
+                    <td>
+                        <img src="undo.png" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class='yellow'>Sample</td>
+                    <td class='yellow'>Sample</td>
+                    <td>
+                        <img src="x.png" alt="">
+                        <img src="tick.png" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class='yellow'>Sample</td>
+                    <td class='yellow'>Sample</td>
+                    <td>
+                        <img src="x.png" alt="">
+                        <img src="tick.png" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class='yellow'>Sample</td>
+                    <td class='yellow'>Sample</td>
+                    <td>
+                        <img src="x.png" alt="">
+                        <img src="tick.png" alt="">
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <input type="submit" value="Submit Changes" class='btn' style='width:150px; height:30px; padding:20px; height:initial; top: 200px; margin-left:20px; color:white; background-color:
+                            orangered;'>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
