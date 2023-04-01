@@ -3,7 +3,7 @@
 <!-- The buttons allow for the managers to navigate to the necessary functions they need to managing employees. Viewing all employees availabilities, time off requests, and modifying/publishing the schedules for employees.  -->
 
 <!-- Cecilia -->
-<!-- Adding the right links  -->
+<!-- Adding the right links  and user options-->
 <html>
 
 <head>
@@ -17,7 +17,7 @@
         }
 
         h3 {
-            text-align: right;
+            text-align: right; 
         }
 
         .button {
@@ -38,41 +38,80 @@
 
         .manageemployeesbutton {
             position: relative;
-            left: 550px;
+            /* left: 550px; */
         }
 
         .viewemployeesavailabilitiesbutton {
             position: relative;
-            left: 650px;
+            /* left: 650px; */
         }
 
         .viewtimeoffrequestsbutton {
             position: relative;
-            left: 550px;
+            /* left: 550px; */
         }
 
         .editpublishschedulesbutton{
             position: relative;
-            left: 650px;
+           /* left: 650px; */
         }
+		
+		.logout {
+		  display: none;
+		}
+
+		.authenticated .logout {
+		  display: block;
+		}
+		
+		ul {
+		  list-style-type: none;
+		  margin: 15px;
+		  padding: 15px;
+		}
+		
+		li {
+			display: inline;
+			padding: 5%;
+			font-size: 18px;
+		}
 
     </style>
     <title>Managers Portal</title>
+    <link rel='stylesheet' href='style.css' />
+	<script>
+		var isAuthenticated = document.cookie.indexOf("authenticated=true") >= 0;
 
+		if (isAuthenticated) {
+		  document.body.className += " authenticated";
+		}
+	</script>
 </head>
 
 <body background="./images/pictureOfFries.jpg">
-    <h2>User Options</h2>
+    <div class='user_opts'>
+			<ul>
+				<li><img src="./images/frybox.png" alt="Fry Box" width="72" height="87.5"></li>
+				<li><a href="ChangePassword.html">Change Password</a></li>
+				<li><a href="/logout" class="logout">Log Out</a></li> <!-- PLEASE DONT CLICK THIS BUTTON YET -->
+				<li><img src="./images/fries.png" alt="Spilling Fries" width="72" height="87.5"></li>
+			</ul>
+		</li>
+	</div>
     <h1>Welcome to the Manager Portal</h1>
-
-    <button class="button manageemployeesbutton" onclick="location.href = 'manageEmp.html'">Manage Employees</button>
-    <button class="button viewemployeesavailabilitiesbutton" onclick="location.href = 'adminAvails.html'">View All Employee's Availabilities</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <button class="button viewtimeoffrequestsbutton" onclick="location.href = 'adminRequests.html'">View (Pending) Time Off</button>
-    <button class="button editpublishschedulesbutton" onclick="location.href = 'managerSchedule.html'">Edit or Publish Schedules</button>
-    <h3 class="right"><a href="FAQ.html">FAQ</a></h3>
+    
+        <div style='display: flex; justify-content: space-between; width: 70%; margin: 0px auto; margin-top:-50px;'>
+        <button class="btn button manageemployeesbutton" onclick="location.href = 'manageEmp.html'">Manage Employees</button>
+        <button class="btn button viewemployeesavailabilitiesbutton" onclick="location.href = 'adminAvails.html'">View All Employee's Availabilities</button>
+    </div>
+    <div style='display: flex; justify-content: space-between; width: 70%; margin: 0px auto;'>
+        <button class="btn button viewtimeoffrequestsbutton" onclick="location.href = 'adminRequests.html'">View (Pending) Time Off</button>
+        <button class="btn button editpublishschedulesbutton" onclick="location.href = 'managerSchedule.html'">Edit or Publish Schedules</button>
+    </div>
+    <h3 class="right">
+        <a href="FAQ.html">FAQ</a>
+        <img src="burger.gif" alt="" class='burger-gif'>
+    </h3>
 </body>
+
 </html>

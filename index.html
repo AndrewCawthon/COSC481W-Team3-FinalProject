@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,29 +11,22 @@
     </style>
     <link rel="stylesheet" href="css/FormTemplate1.css">
 </head>
-<body>
-	
+<body>	
     <div class="main">
-        <form class="form" id="login">
-
+        <form class="form" id="loginForm" method="get" action="./php/indexPHP.php">
             <h1 class="page_title">Login to Employee Portal</h1>
-
-            <input type="text" class="form__input" autofocus="" placeholder="Employee ID"> <br><br>
-            <input type="password" class="form__input" autofocus="" placeholder="Password"> <br><br>
-            <input type="submit" id ="login" class = "inputStyle" value="LogIn"> <br><br>
-    
+            <input type="text" class="form__input" id="employeeID" name="employeeID" autofocus="" placeholder="Employee ID"> <br><br>
+            <input type="password" class="form__input" id="password" name="password" autofocus="" placeholder="Password"> <br><br>
+            <input type="submit" id="login" name="login" class="inputStyle" value="LogIn"> <br><br>   
             <a href="resetPass.html" class="form__link">Forgot your password?</a> <br><br>
             <a class="form__link" href="firstLogIn.html" id="linkFirstTime">First Time User?</a><br> <br>
             <a class="form__link" href="adminLogIn.html" id="linkAdminLogin">Admin Login</a>
-            
         </form>
     </div>
     <div class = "FAQ">
-
-        <a href="FAQ.html"> FAQ</a>
+        <div class = "content"> <p><a href="FAQ.html"> FAQ</a></p></div>
         <img src="burger.gif" alt="burger">
-
     </div>
-    <script src="main.js"></script> 
 </body>
 </html>
+
