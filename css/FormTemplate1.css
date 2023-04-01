@@ -1,45 +1,50 @@
             .main{
                 text-align: center;
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
             }
             html{
-                height: 100%;
+                min-height: 100%;
             }
             body{
                 background-image: url('../images/red_bg.png');
                 background-repeat: no-repeat;
                 background-size: cover;
                 color: white;
-                width: 100%;
-                height: 100%;
                 overflow: hidden;
             }
             input{
                 background-color: rgba(219, 219, 26, 0.982);
                 color: gray;
-                width: 14%;
-                height: 26px;
-                font-size: 2vw;
+                width: 20%;
+                height: 28px;
+                font-size: 20px;
             }
             h1{
-                font-size: 5vw;
+                font-size: 65px;
                 font-family: monospace;
-                font-weight: 30;
             }
             .inputStyle{
-                width: 20%;
-                height: 281.25%;
+                width: 28%;
+                height: 48px;
                 color: black;
                 border-radius: 12px;
-                font-size: 2vw;
+                font-size: 20px;
                 background-color: rgb(249, 249, 85);
             }
-            .FAQ{
-               text-align: right;
-               font-size: 30px;
-            }
+            .FAQ {
+                position: fixed;
+                right: 0px; 
+                bottom: 0px;
+                width: 200px;
+                height:250px;
+                font-size: 25px;
+                font-weight: bold;
+              }
             img{
-                width: 18%; 
-                height: 18%;
+                width: 70%; 
+                height: 70%;
             }
             .content{
                 padding-right: 20%;
@@ -49,23 +54,175 @@
                 font-size: 150%;
                 font-weight: bold;
             }
-
-            @media screen and (max-width:600px){
-                .main{
-                    flex-direction: column;
-                }
-                .FAQ{
-                    flex-direction: column;
-                }
-                
+            a:active, a:visited{
+                color:white;
             }
 
-            @media screen and (max-width:1200px){
+            
+
+            @media screen and (max-width: 2000px){
+                body{
+                    background-size: 100% 100%;
+                }
+
+                h1{
+                    font-size: 80px;
+                    font-family: monospace;
+                }
+
+                .FAQ{
+                    width: 150px;
+                    height:200px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .inputStyle{
+                    width: 28%;
+                    height: 60px;
+                    font-size: 34px;
+                }
+                input{
+                    width: 22%;
+                    height: 48px;
+                    font-size: 32px;
+                }
                 .main{
-                    flex-direction: column;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            @media screen and (max-width: 1500px){
+                body{
+                    background-size: 100% 100%;
+                }
+
+                h1{
+                    font-size: 65px;
+                    font-family: monospace;
+                }
+
+                .FAQ{
+                    width: 150px;
+                    height:200px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .inputStyle{
+                    width: 26%;
+                    height: 48px;
+                    font-size: 20px;
+                }
+                input{
+                    width: 22%;
+                    height: 28px;
+                    font-size: 20px;
+                }
+                .main{
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            @media screen and (max-width: 800px){
+                body{
+                    background-size: 100% 100%;
+                }
+
+                h1{
+                    font-size: 50px;
+                    font-family: monospace;
+                }
+
+                .FAQ{
+                    width: 150px;
+                    height:200px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .inputStyle{
+                    width: 42%;
+                    height: 50px;
+                    font-size: 22px;
+                }
+                input{
+                    width: 30%;
+                    height: 40px;
+                    font-size: 22px;
+                }
+                .main{
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            
+            @media screen and (max-width: 500px){
+                body{
+                    background-size: 100% 100%;
+                }
+
+                h1{
+                    font-size: 35px;
+                    font-family: monospace;
+                }
+
+                .FAQ{
+                    width: 150px;
+                    height:200px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .inputStyle{
+                    width: 48%;
+                    height: 40px;
+                    font-size: 23px;
+                }
+                input{
+                    width: 38%;
+                    height: 30px;
+                    font-size: 20px;
+                }
+                .main{
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+           
+            /*up to 500px*/
+            /* @media (max-width: 500px){
+                .inputStyle{
+                    width: 70%;
+                    min-height: 70px;
+                }
+                input{
+                    width: 70%;
+                    min-height: 70px;
                 }
                 .FAQ{
-                    flex-direction: column;
+                    min-width: 200px;
+                    min-height:250px;
                 }
-                
-            }
+            } */
+
+
+
+        
+
+        
