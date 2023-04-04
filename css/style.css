@@ -1,15 +1,28 @@
 * {
-  font-family: Arial;
+  font-family: "Comic Sans MS";
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #ff9a3c;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('background-img.jpg');
+  background-size: cover;
+  background-position: center, center;
 }
 
 h1 {
   margin: 10px 0px;
 }
 
+h2 {
+  text-align: right;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
 .container {
   display: grid;
   place-items: center;
@@ -41,7 +54,6 @@ h1 {
   padding: 25px;
   padding-bottom: 40px;
   font-size: 15px;
-  font-weight: bold;
   border-radius: 25px;
   margin-top: 100px;
   margin-left: 30px;
@@ -147,7 +159,6 @@ input {
   transform: scale(2);
 }/*# sourceMappingURL=style.css.map */
 
-
 .top{
   display: flex;
   justify-content: space-between;
@@ -156,8 +167,12 @@ input {
   color: white;
   font-size: 60px;
   text-align: center;
-  width: 500px;
 }
+
+.top ul{
+  width: 400px;font-size: 25px; font-weight: lighter;color: aliceblue;
+}
+
 #availForm{
   width: 90%;
   margin: 20px auto;
@@ -183,10 +198,10 @@ input {
 }
 #h1{
   color: white;
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
-  width: 500px;
   margin: auto;
+  font-weight: lighter;
 }
 #request img{
   width: 50%;
@@ -212,22 +227,45 @@ input {
   height: 100px;
   margin-top: -30px;
 }
+
 .burger-gif{
   width: 50px;
   margin-bottom: -10px;
 }
-
-#avails th, #avails td{
-  color: white;
-  text-align: left;
-  font-size: 22px;
+.mainButton{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0px auto;
+  margin-top: -50px;
 }
 
-#avails th:first-child, #avails td:first-child{
-  width: 100px;
-}
+@media screen and (max-width: 480px) {
+  .mainButton {
+    flex-direction: column;
+    align-items: center;
+  }
+  #request{
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    width: 250px;
+  }
 
-#avails td{
-  font-size: 20px;
-}
+  #h1 {
+    font-size: 40px;
+  }
+  h2{
+    padding: 0px;
+    font-weight: lighter;
+    font-size: 20px;
+  }
+  .top{
+    flex-direction: column;
+  }
+  .top ul{
+    font-size: 15px;
+  }
 
+}

@@ -1,0 +1,272 @@
+* {
+    font-family: "Comic Sans MS";
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #ff9a3c;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('background-img.jpg');
+    background-size: cover;
+    background-position: center, center;
+  }
+  
+  h1 {
+    margin: 10px 0px;
+  }
+  
+  h2 {
+    text-align: right;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .container {
+    display: grid;
+    place-items: center;
+    min-height: 90vh;
+    font-size: 25px;
+    color: white;
+  }
+  
+  .page {
+    width: 700px;
+  }
+  
+  .hide {
+    display: none !important;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: 400px 100px;
+    align-items: start;
+  }
+  
+  .btn {
+    border: none;
+    height: 30px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 25px;
+    padding-bottom: 40px;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-top: 100px;
+    margin-left: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ffdb4e;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .btn:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Back Button */
+  .back-btn {
+    border: none;
+    margin: 0px 3px;
+    font-size: 30px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0px !important;
+    width: 30px;
+    color: white;
+    background-color: white;
+    -webkit-mask: url(./asset/turn-back.svg) no-repeat center;
+    mask: url(./asset/turn-back.svg) no-repeat center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .back-btn:hover {
+    transform: translateY(-10px);
+  }
+  
+  .border-back-btn {
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #F36300;
+    font-size: 25px !important;
+    float: left;
+    margin-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  /* Employee Entry Classes */
+  .border-btn {
+    border: 3px solid #2f2f2f;
+    margin-right: 10px;
+  }
+  
+  .edit-btn {
+    border: none;
+    margin: 0px 3px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    background-color: white;
+    -webkit-mask: url(./asset/edit-box-icon.svg) no-repeat center;
+    mask: url(./asset/edit-box-icon.svg) no-repeat center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .edit-btn:hover {
+    transform: translateY(-10px);
+  }
+  
+  .employee-entry {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .employee-name {
+    border: 3px solid #2f2f2f;
+    padding: 5px;
+    flex-grow: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  /* Edit Employee */
+  label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+    margin-right: 5px;
+    width: 170px;
+    font-size: 20px;
+  }
+  
+  input {
+    background-color: rgb(237, 237, 237);
+    border: none;
+    width: 100px;
+  }
+  
+  .delete label {
+    margin-right: 20px;
+    color: #000;
+  }
+  .delete input {
+    margin: 0px;
+    margin-top: -30px;
+    transform: scale(2);
+  }/*# sourceMappingURL=style.css.map */
+  
+  .top{
+    display: flex;
+    justify-content: space-between;
+  }
+  .top h1{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+  }
+  
+  .top ul{
+    width: 400px;font-size: 25px; font-weight: lighter;color: aliceblue;
+  }
+  
+  #availForm{
+    width: 90%;
+    margin: 20px auto;
+  }
+  #availForm fieldset, #availForm label {
+    color: white;
+  }
+  #availForm fieldset label{
+    font-size: 24px;
+  }
+  #availForm fieldset input{
+    font-size: 24px;
+    padding: 7px;
+    margin: 2px;
+  }
+  
+  
+  .button {
+      width: 350px;
+      padding: 20px;
+      font-size: 27px;
+      height: 120px;
+  }
+  #h1{
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    margin: auto;
+    font-weight: lighter;
+  }
+  #request img{
+    width: 50%;
+    height: 400px;
+    margin: 7px;
+  }
+  #request{
+    display: flex;
+    justify-content: center;
+  }
+  #request label, #request p{
+    color: white;
+    font-size: 24px;
+  }
+  #request input{
+    font-size: 24px;
+    padding: 7px;
+    margin: 4px;
+    width: 200px;
+  }
+  #request textarea{
+    width: 300px;
+    height: 100px;
+    margin-top: -30px;
+  }
+  
+  .burger-gif{
+    width: 50px;
+    margin-bottom: -10px;
+  }
+  .mainButton{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0px auto;
+    margin-top: -50px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .mainButton {
+      flex-direction: column;
+      align-items: center;
+    }
+    #request{
+      flex-direction: column;
+      align-items: center;
+    }
+    .button {
+      width: 250px;
+    }
+  
+    #h1 {
+      font-size: 40px;
+    }
+    h2{
+      padding: 0px;
+      font-weight: lighter;
+      font-size: 20px;
+    }
+    .top{
+      flex-direction: column;
+    }
+    .top ul{
+      font-size: 15px;
+    }
+  
+  }
+  
