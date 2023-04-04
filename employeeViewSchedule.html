@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <!-- edited by Cecilia: will simply make it so an image can be pulled from the DB once it's able to be stored -->
 <html>
+
 <head>
     <title>View Published Schedules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
     <style>
         h1 {
             text-align: center;
-            background-color: rgb(235, 35, 35);
             width: max-content;
             margin-left: auto;
             margin-right: auto;
         }
+
         h2 {
             text-align: center;
-            background-color: rgb(235, 35, 35);
             width: max-content;
             margin-left: auto;
             margin-right: auto;
         }
+
         h3 {
             text-align: center;
-            background-color: rgb(235, 35, 35);
             width: max-content;
             margin-left: auto;
             margin-right: auto;
         }
+
         .button {
             border: none;
             color: black;
@@ -52,8 +55,8 @@
     </style>
     <link rel='stylesheet' href='style.css'>
 </head>
-	
-<body background="./images/pictureOfFries.jpg">
+
+<body>
     <button class='btn' style="width:100px; height:30px; margin-top: 10px" onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
     <h1 id='h1'>Schedules</h1>
     <h2 style='color: white'>Choose a schedule to view</h2>
@@ -65,8 +68,10 @@
         <input type="submit" value="Submit" class='btn' style='padding:7px; height:initial; margin-top: 0px; margin-left:0px; color:white; background-color:
         orangered'>
     </form>
-	<!--
+
     <h2>View Schedule</h2>
+    <div id="schedule" style='width:70%;  margin: 5px auto; text-align:center; background-color: grey;'>
+
     <table border="1">
         <tr>
             <th>Day</th>
@@ -109,9 +114,8 @@
             <td>5:00 PM</td>
         </tr>
     </table>
-	-->
-	<div id="schedule" style='width:70%; height: 300px; margin: 5px auto; text-align:center; background-color: grey;'>
-		<p> pending on working DB to pull schedule </p>
-	</div>
+    </div>
+
 </body>
+
 </html>

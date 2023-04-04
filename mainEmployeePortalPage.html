@@ -3,10 +3,12 @@
 <!-- The buttons allow for the employee to view published schdules, change availability or request time off  -->
 
 <!-- Cecilia -->
-<!-- Adding the right links, also added User Options Menu  -->
+<!-- Adding the right links  -->
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width">
+
     <style>
         h1 {
             text-align: center;
@@ -20,85 +22,34 @@
             text-align: right;
         }
 
-        .button {
-            border: none;
-            color: black;
-            background-color: #FFD94F;
-            border-radius: 4px;
-            padding: 13px 25px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            margin: 4px 2px;
-            cursor: pointer;
-            width: 300px;
-        }
-
         .viewpublishedschedulesbutton {
             position: relative;
-            /* left: 150x; */
+            /* left: 150px; */
         }
 
         .changeavailabilitybutton {
             position: relative;
-            /* left: 250x; */
+            /* left: 250px; */
         }
 
         .requesttimeoffbutton {
             position: relative;
-            /* left: 350x; */
+            /* left: 350px; */
         }
-		
-		.logout {
-		  display: none;
-		}
-
-		.authenticated .logout {
-		  display: block;
-		}
-		
-		ul {
-		  list-style-type: none;
-		  margin: 15px;
-		  padding: 15px;
-		}
-		
-		li {
-			display: inline;
-			padding: 5%;
-			font-size: 18px;
-		}
-
     </style>
     <title>Employee Portal</title>
-     <link rel='stylesheet' type='text/css' href='style.css'>
-	<script>
-		var isAuthenticated = document.cookie.indexOf("authenticated=true") >= 0;
-
-		if (isAuthenticated) {
-		  document.body.className += " authenticated";
-		}
-	</script>
+    <link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 
 <body background="./images/pictureOfFries.jpg">
-	<div class='user_opts'>
-			<ul>
-				<li><img src="./images/frybox.png" alt="Fry Box" width="72" height="87.5"></li>
-				<li><a href="ChangePassword.html">Change Password</a></li>
-				<li><a href="/logout" class="logout">Log Out</a></li> <!-- PLEASE DONT CLICK THIS BUTTON YET -->
-				<li><img src="./images/fries.png" alt="Spilling Fries" width="72" height="87.5"></li>
-			</ul>
-		</li>
-	</div>
-	
-    <h1 id='h1'>Welcome to the Employee Portal</h1>
+    <h2>User Options</h2>
+    <h1 id='h1'>Welcome to the <br>Employee Portal</h1>
 
-    <button class="btn button viewpublishedschedulesbutton" onclick="location.href = 'employeeViewSchedule.html'">View Published Schedules</button>
-    <button class="btn button changeavailabilitybutton" onclick="location.href = 'employeeChangeAvail.html'">Change Availability</button>
+    <div class="mainButton">
+        <button class="btn button viewpublishedschedulesbutton" onclick="location.href = 'employeeViewSchedule.html'">View Published Schedules</button>
+        <button class="btn button changeavailabilitybutton" onclick="location.href = 'employeeChangeAvail.html'">Change Availability</button>
     </div>
-    <div style='text-align: center'>
+    <div class="mainButton" style="justify-content: center ">
         <button class="button btn requesttimeoffbutton" onclick="location.href = 'employeeRequest.html'">Request Time Off</button>
     </div>
     <h3 class="right">
