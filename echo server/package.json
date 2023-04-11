@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "mssql": "^9.1.1",
     "nodemailer": "^6.9.1",
     "socket.io": "^4.5.4",
     "ws": "^8.11.0"

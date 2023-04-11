@@ -1,21 +1,30 @@
+var socket;
+const webSocketLocation = "ws:Localhost:18083";
 var table;
-var jsons;
+var jsons = new Array();
 
 // gets the proper files from the database on page load 
 function onload() {
-    // using test data for now
-    jsons = [
-        {
-            name: "Nathan Zimmer",
-            details: "day x to day y for vacation or something",
-            status: 1
-        },
-        {
-            name: "Nathan Zimmer",
-            details: "because I don't want to work",
-            status: 0
-        }
-    ];
+    socket = new WebSocket(webSocketLocation);
+
+    socket.onopen = () => {
+        console.log(`Connected to server on ${webSocketLocation}`);
+    }
+
+    // socket sends db data on connection
+    socket.onmessage = ({data}) => {
+        let parsed = JSON.parse(data);
+        jsons = parsed[0];
+
+        setTable("requests");
+        addRow();
+    };
+
+    // attempts reconnection once every second when connection to the server is lost
+    socket.onclose = ({data}) => {
+        console.log(`Connecion has been closed with message: ${data}. Attempting reconnect`); // currently server does not say anything to clients when it shuts down
+        setTimeout(() => { start() }, 1000);
+    };
 }
 
 // sets the table that we will be using for the time off requests
@@ -25,6 +34,9 @@ function setTable(tableName) {
 
 // takes a list of json files (formatted: name, details, status[0(undecided) or 1(approved) or 2(denied)]) and adds them to the table. Adds event listeners to the buttons
 function addRow() {
+
+
+
     let counter = 0;
     jsons.forEach(json => {
         // creating new row element
@@ -51,6 +63,10 @@ function addRow() {
         // if status has already been chosen we can undo it
         else {
             addButton(row, "undo", "undo" + counter++, onUndo);
+            if (json.status == 1)
+                row.style.backgroundColor = "green";
+            else
+                row.style.backgroundColor = "red";
         }
 
         // adding this row to the table
@@ -64,6 +80,9 @@ function onApprove(event) {
     let index = parseInt(button.id.at(-1));
     let row = button.parentNode;
     button.remove();
+
+    // setting background color to green
+    row.style.backgroundColor = "green";
 
     // deleting deny button
     document.getElementById("deny" + index).remove();
@@ -83,6 +102,9 @@ function onDeny(event) {
     let row = button.parentNode;
     button.remove();
 
+    // setting background color to red
+    row.style.backgroundColor = "red";
+
     // deleting deny button
     document.getElementById("approve" + index).remove();
 
@@ -100,6 +122,9 @@ function onUndo(event) {
     let index = parseInt(button.id.at(-1));
     let row = button.parentNode;
     button.remove();
+
+    // setting background color to white
+    row.style.backgroundColor = "white";
 
     // adding approve button
     addButton(row, "approve", "approve" + index, onApprove);
@@ -126,7 +151,7 @@ function addButton(row, text, id, listener) {
 
 // submits all of the json files to the database
 function onSubmit() {
-    console.log("submitted");
+    socket.send(JSON.stringify({command: "set", message: jsons}));
 }
 
 onload();
