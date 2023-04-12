@@ -25,10 +25,23 @@
           </div> -->
 
         </div>
-        <button class="btn" onclick="openAdd()">Add New Employee</button>
+
+        <form action="firstLogin.html" method="get">
+          <input type="submit" value="Add New Employee" class="btn">
+        </form>
+
+        <form action="./php/viewEmployees.php" method="post">
+          <input type="submit" value="Manage Employees" class="btn">
+        </form>
+
+        <form action="./php/viewSchedules.php" method="post">
+          <input type="submit" value="View Schedules By Employee" class="btn">
+        </form>
+
       </div>
     </div>
   </div>
+
 
 
   <script src="script.js"></script>

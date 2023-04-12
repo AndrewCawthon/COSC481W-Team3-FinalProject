@@ -51,62 +51,22 @@
 		</ul>
 	</div>
 	<div id="availForm">
-		<form action="/adminAvails.html" method="post">
+		<form action="./php/employeeChangeAvail.php" method="post">
 			<fieldset style="float:left">
 				<legend>Earliest Start Time:</legend>
-				<label>Sunday: </label>
-				<input type="time" id="SunST">
+				<input type="time" name="ST" id="SunST">
 				<br>
-				<label>Monday: </label>
-				<input type="time" id="MonST">
-				<br>
-				<label>Tuesday: </label>
-				<input type="time" id="TueST">
-				<br>
-				<label>Wednesday: </label>
-				<input type="time" id="WedST">
-				<br>
-				<label>Thursday: </label>
-				<input type="time" id="ThuST">
-				<br>
-				<label>Friday: </label>
-				<input type="time" id="FriST">
-				<br>
-				<label>Saturday: </label>
-				<input type="time" id="SatST">
 			</fieldset>
 
 			<fieldset style="float:left">
 				<legend>Latest End Time:</legend>
-				<label>Sunday: </label>
-				<input type="time" id="SunET">
+				<input type="time" name="ET" id="SunET">
 				<br>
-				<label>Monday: </label>
-				<input type="time" id="MonET">
-				<br>
-				<label>Tuesday: </label>
-				<input type="time" id="TueET">
-				<br>
-				<label>Wednesday: </label>
-				<input type="time" id="WedET">
-				<br>
-				<label>Thursday: </label>
-				<input type="time" id="ThuET">
-				<br>
-				<label>Friday: </label>
-				<input type="time" id="FriET">
-				<br>
-				<label>Saturday: </label>
-				<input type="time" id="SatET">
 			</fieldset>
 
 			<fieldset style="float:left;margin-top: 0px;float:left;margin-left: 30px;font-size: 30px;">
 				<legend>Date to take effect:</legend>
-				<input type="date" id="AvailSD" style='width: 200px'>
-				<br>
-				<label>Notes/Details</label>
-				<br>
-				<textarea name="" id="" cols="30" rows="10"></textarea>
+				<input type="date" name="dateEffect" id="AvailSD" style='width: 200px'>
 			</fieldset>
 
 			<br>

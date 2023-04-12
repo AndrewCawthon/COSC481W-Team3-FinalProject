@@ -3,15 +3,17 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Login</title>
-
+    <title>User Creation</title>
+    <style>       
+        @media screen and (max-width: 480px) {}  
+    </style>
     <link rel="stylesheet" href="css/FormTemplate1.css">
 </head>
 <body>
     <div class="main">
-        <h1>First Time Login</h1>
+        <h1>User Creation</h1>
         <form class="form" id="first_login" method="get" action="./php/firstLogIn.php">  
-            <input type="text" name="employeeID" class="form__input" autofocus="" placeholder="Employee ID"> <br><br>		
+            <input type="text" name="username" class="form__input" autofocus="" placeholder="New Username"> <br><br>		
 			<!--
             <div class="form__input-group">
                 <input type="def_password" class="form__input" autofocus="" placeholder="Provided Password">
@@ -19,8 +21,8 @@
             </div>
 			-->
             <input type="password" name="password" class="form__input" autofocus="" placeholder="New Password"> <br><br>
-            <input type="submit" name="submit" id ="setpass" class = "inputStyle" value="Set password & Login"><br><br>
-            <a class="form__link" href="index.html">Not a First Time User?</a>       
+            <input type="submit" name="submit" id ="setpass" class = "inputStyle" value="Set User"><br><br>
+            <!-- <a class="form__link" href="index.html">Not a First Time User?</a> -->       
         </form>
     </div>
     <div class = "FAQ">
