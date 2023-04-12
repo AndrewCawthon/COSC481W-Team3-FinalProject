@@ -1,16 +1,11 @@
 * {
-    font-family: "Arial";
-    margin: 0;
-    padding: 0;
+    font-family: Arial;
   }
   
   body {
     background-color: #ff9a3c;
-    width: 100vw;
-    height: 100vh;
     background-image: url('backgroungimage.png');
     background-size: cover;
-    background-position: center, center;
   }
   
   h1 {
@@ -18,19 +13,15 @@
     text-align:center;
     color:white;
   }
-  
-  h2 {
-    text-align: right;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
+  h2{
+      color:white;
   }
   .container {
     display: grid;
     place-items: center;
-    min-height: 90vh;
     font-size: 25px;
     color: white;
+  
   }
   
   .page {
@@ -44,7 +35,7 @@
   .wrapper {
     display: grid;
     grid-template-columns: 400px 100px;
-    align-items: start;
+    align-items: center;
   }
   
   .btn {
@@ -56,9 +47,11 @@
     padding: 25px;
     padding-bottom: 40px;
     font-size: 15px;
+    font-weight: bold;
     border-radius: 25px;
     margin-top: 100px;
     margin-left: 30px;
+    margin-bottom:50px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -126,6 +119,7 @@
   .employee-entry {
     display: flex;
     margin-top: 10px;
+    margin-bottom:30px;
   }
   
   .employee-name {
@@ -169,12 +163,8 @@
     color: white;
     font-size: 60px;
     text-align: center;
+    width: 500px;
   }
-  
-  .top ul{
-    width: 400px;font-size: 25px; font-weight: lighter;color: aliceblue;
-  }
-  
   #availForm{
     width: 90%;
     margin: 20px auto;
@@ -185,25 +175,27 @@
   #availForm fieldset label{
     font-size: 24px;
   }
-  #availForm fieldset input{
+  #availForm  input{
     font-size: 24px;
     padding: 7px;
     margin: 2px;
+    width:200px;
+    display:block;
   }
   
   
   .button {
-      width: 350px;
-      padding: 20px;
-      font-size: 27px;
-      height: 120px;
+    width: 350px;
+    padding: 20px;
+    font-size: 27px;
+    height: 120px;
   }
   #h1{
     color: white;
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
+    width: 500px;
     margin: auto;
-    font-weight: lighter;
   }
   #request img{
     width: 50%;
@@ -234,13 +226,7 @@
     width: 50px;
     margin-bottom: -10px;
   }
-  .mainButton{
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    margin: 0px auto;
-    margin-top: -50px;
-  }
+  
   .table th, .table td{
     color: white;
     text-align: left;
@@ -278,38 +264,32 @@
     cursor: pointer;
   }
   .editcion{
-    margin-right:10px;
-    height:45px;
-  
+      margin-right:10px;
+      height:45px;
   }
-  
-  @media screen and (max-width: 480px) {
-    .mainButton {
-      flex-direction: column;
-      align-items: center;
-    }
-    #request{
-      flex-direction: column;
-      align-items: center;
-    }
-    .button {
-      width: 250px;
-    }
-  
-    #h1 {
-      font-size: 40px;
-    }
-    h2{
-      padding: 0px;
-      font-weight: lighter;
-      font-size: 20px;
-    }
-    .top{
-      flex-direction: column;
-    }
-    .top ul{
-      font-size: 15px;
-    }
-  
+  #mangeEmployeeHeading
+  {
+      display:inline-block;
+      margin-left:50px;
+      margin-top:50px;
   }
-  
+  #addnewemployee{
+      border-radius:35px;
+      height:130px;
+      padding:20px;
+      margin-left:150px;
+  }
+  .timewrapper{
+      display:inline-block;
+  }
+  #AvailSD{
+      
+  }
+  #notetextid{
+      
+      margin-bottom:130px;
+  }
+  #notes{
+      text-align:left;
+      margin-left:130px;
+  }
