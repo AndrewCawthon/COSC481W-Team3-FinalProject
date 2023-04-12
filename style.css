@@ -8,7 +8,7 @@
     background-color: #ff9a3c;
     width: 100vw;
     height: 100vh;
-    background-image: url('background-img.jpg');
+    background-image: url('backgroungimage.png');
     background-size: cover;
     background-position: center, center;
   }
@@ -238,6 +238,42 @@
     width: 70%;
     margin: 0px auto;
     margin-top: -50px;
+  }
+  .table th, .table td{
+    color: white;
+    text-align: left;
+    font-size: 22px;
+    margin: 4px;
+  }
+  
+  .table th:first-child, .table td:first-child{
+    width: 100px;
+    padding: 10px;
+  }
+  
+  .table td{
+    font-size: 20px;
+  }
+  
+  .green{
+    border: solid 3px green;
+  }
+  
+  .yellow{
+    border: solid 3px yellow;
+  }
+  
+  .red{
+    border: solid 3px red;
+  }
+  
+  .table tr{
+    margin: 4px 2px;
+  }
+  
+  .table img{
+    width: 30px;
+    cursor: pointer;
   }
   
   @media screen and (max-width: 480px) {
