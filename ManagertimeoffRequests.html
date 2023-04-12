@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Off Requests</title>
     <script type="text/javascript" src="adminRequests.js"></script>
     <style>
@@ -15,11 +13,11 @@
         }
         a {
             color: blue;
-            text-decoration: underline;
+			text-decoration: underline;
         }
-        a:hover {
-            text-decoration: none;
-        }
+		a:hover {
+			text-decoration: none;
+		}
         header{
             height: 70px;
             width: 100%;
@@ -38,25 +36,22 @@
             padding-right: 10px;
             text-align: center;
         }
-        @media screen and (max-width: 480px) {}
+        @media screen and (max-width: 480px) {}  
     </style>
 </head>
 <body>
-<div class="container">
-
-<button class="btn" style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
-<h1>Time Off Requests</h1>
-<h3>Have to submit changes before leaving page</h3>
-<div id="requestsPending">
-    <form action="/adminRequests.html" method="post">
-        <table id="requests">
-            <script>setTable("requests")</script>
-            <script>addRow()</script>
-        </table>
-        <br>
-        <button class="btn" type="submit" onclick="onSubmit()">Submit Changes</button>
-    </form>
-</div>
-</div>
+	<button style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
+    <h1>Time Off Requests</h1>
+    <h3>Have to submit changes before leaving page</h3>
+	<div id="requestsPending">
+		<form action="/adminRequests.html" method="post"> 
+			<table id="requests">
+                <script>setTable("requests")</script>
+                <script>addRow()</script>
+			</table>
+			<br>
+			<button type="submit" onclick="onSubmit()">Submit Changes</button>
+		</form>
+	</div>
 </body>
 </html>
