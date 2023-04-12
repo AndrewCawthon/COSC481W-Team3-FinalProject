@@ -19,7 +19,7 @@
             <input type="text" class="form__input" id="username" name="username" autofocus="" placeholder="Username"> <br><br>
             <input type="password" class="form__input" id="password" name="password" autofocus="" placeholder="Password"> <br><br>
             <input type="submit" id="login" name="login" class="inputStyle" value="LogIn"> <br><br>   
-            <a href="resetPass.html" class="form__link">Forgot your password?</a> <br><br>
+            <a href="ResetPassword.html" class="form__link">Forgot your password?</a> <br><br>
             <!-- <a class="form__link" href="firstLogIn.html" id="linkFirstTime">First Time User?</a><br> <br> -->
             <a class="form__link" href="adminLogIn.php" id="linkAdminLogin">Admin Login</a>
         </form>
