@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
-    <title>Time Off Requests</title>
-    <script type="text/javascript" src="adminRequests.js"></script>
+    <title>Availability Requests</title>
     <style>
         *{
             text-decoration: none;
@@ -34,29 +32,62 @@
             margin-left: auto;
             margin-right: auto;
         }
-        td {
-            padding-right: 10px;
-            text-align: center;
-        }
         @media screen and (max-width: 480px) {}
     </style>
+    <link rel='stylesheet' href='style.css' />
 </head>
-<body>
-<div class="container">
 
-<button class="btn" style="width:100px; height:30px" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
-<h1>Time Off Requests</h1>
-<h3>Have to submit changes before leaving page</h3>
-<div id="requestsPending">
-    <form action="/adminRequests.html" method="post">
-        <table id="requests">
-            <script>setTable("requests")</script>
-            <script>addRow()</script>
+<body>
+<button class='btn' style="width:100px; height:30px; margin-top: 10px;" onclick="location.href = 'welcomeToTheManagerPortalPage.html'">Home</button>
+<h1 id='h1' style='width: 700px;'>Time Off Requests</h1>
+<h3 style='color:white;text-align: center'>Have to submit changes before leaving page</h3>
+<div id="availsPending">
+    <form action="/adminAvails.html" method="post" style='display: flex; justify-content: center;'>
+        <table id="avails" style='width:60%' class='table'>
+            <script>createHeader()</script>
+            <script>updateHeader(true)</script>
+            <script>createRows()</script>
+            <!-- will have to use JS to list all the requests with their respective available actions
+            will also have to remember to color code them based on status-->
+            <tr>
+                <th class='green'>Name</th>
+                <th class='green'>Details</th>
+            </tr>
+            <tr>
+                <td class='green'>Sample</td>
+                <td class='green'>Sample</td>
+            </tr>
+            <tr>
+                <td class='green'>Sample</td>
+                <td class='green'>Sample</td>
+            </tr>
+            <tr>
+                <td class='yellow'>Sample</td>
+                <td class='yellow'>Sample</td>
+                <td>
+                    <img src="tick.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td class='yellow'>Sample</td>
+                <td class='yellow'>Sample</td>
+                <td>
+                    <img src="tick.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td class='yellow'>Sample</td>
+                <td class='yellow'>Sample</td>
+                <td>
+                    <img src="tick.png" alt="">
+                </td>
+            </tr>
         </table>
-        <br>
-        <button class="btn" type="submit" onclick="onSubmit()">Submit Changes</button>
+
+        <input class='btn' type="submit" value="Submit Changes" style='font-size:15px; padding:20px; height:30px; margin-top: 30px; margin-left:140px;
+                    text-align: center; color:white; background-color: orangered'>
     </form>
 </div>
-</div>
 </body>
+
 </html>

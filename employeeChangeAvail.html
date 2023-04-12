@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link type="text/css" rel='stylesheet' href='style.css'>
+	<link type="text/css" rel='stylesheet' href='style2.css'>
 	<title>Change Availability</title>
 	<style>
 		* {
@@ -43,7 +43,7 @@
 
 <body>
 	<div class="top">
-		<button class='btn' style="width:100px; height:30px; margin-top: 10px" onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
+		<button class='btn' style="width:100px; height:30px; margin-top: 10px" onclick="location.href = 'mainEmployeePortalPage.html'">Back</button>
 		<h1 id='h1'>Change <br>Availability</h1>
 		<ul>
 			<li>Select availability for each day</li>
@@ -52,13 +52,47 @@
 	</div>
 	<div id="availForm">
 		<form action="./php/employeeChangeAvail.php" method="post">
-			<fieldset style="float:left">
-				<legend>Earliest Start Time:</legend>
+		<div class="timewrapper">
+				<h1> </h1>
+				<h2>Monday -</h2>
+				<h2>Tuesday -</h2>
+				<h2>Wednesday -</h2>
+				<h2>Thursday -</h2>
+				<h2>Friday -</h2>
+				<h2>Saturday -</h2>
+				<h2>Sunday -</h2>
+			</div>
+			<div class="timewrapper">
+				<h1> Start Time</h1>
 				<input type="time" name="ST" id="SunST">
-				<br>
-			</fieldset>
-
-			<fieldset style="float:left">
+				<input type="time" name="ST" id="SunST">
+				<input type="time" name="ST" id="SunST">
+				<input type="time" name="ST" id="SunST">
+				<input type="time" name="ST" id="SunST">
+				<input type="time" name="ST" id="SunST">
+				<input type="time" name="ST" id="SunST">
+			</div>
+			
+			<div class="timewrapper">
+				<h1>End Time</h1>
+				<input type="time" name="ET" id="SunET">
+				<input type="time" name="ET" id="SunET">
+				<input type="time" name="ET" id="SunET">
+				<input type="time" name="ET" id="SunET">
+				<input type="time" name="ET" id="SunET">
+				<input type="time" name="ET" id="SunET">
+				<input type="time" name="ET" id="SunET">
+			</div>
+			<div class="timewrapper">
+			<h1 id='notes'>Date to take effect:</h1>
+			<input type="date" name="dateEffect" id="AvailSD" style='margin-left:130px;'>
+			<br><br>
+			<h1 id='notes'>Notes/Details:</h1>
+			<input type="text" name="notestext" id="notetextid" style='margin-left:130px;margin-bottom:130;'>
+			<br><br>
+			<input class='btn' type="submit" value="Submit" style='font-size:24px; padding:20px; height:initial; margin-top: 10px; margin-left:140px; color:white; background-color: orangered' >
+			<div>
+			<!--<fieldset style="float:left">
 				<legend>Latest End Time:</legend>
 				<input type="time" name="ET" id="SunET">
 				<br>
@@ -67,10 +101,10 @@
 			<fieldset style="float:left;margin-top: 0px;float:left;margin-left: 30px;font-size: 30px;">
 				<legend>Date to take effect:</legend>
 				<input type="date" name="dateEffect" id="AvailSD" style='width: 200px'>
-			</fieldset>
+			</fieldset>-->
 
-			<br>
-			<input class='btn' type="submit" value="Submit" style='font-size:24px; padding:20px; height:initial; margin-top: 10px; margin-left:140px; color:white; background-color: orangered'>
+			
+			
 		</form>
 	</div>
 </body>
