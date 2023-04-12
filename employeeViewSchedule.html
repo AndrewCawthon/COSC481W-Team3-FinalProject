@@ -60,13 +60,14 @@
     <button class='btn' style="width:100px; height:30px; margin-top: 10px" onclick="location.href = 'mainEmployeePortalPage.html'">Home</button>
     <h1 id='h1'>Schedules</h1>
     <h2 style='color: white'>Choose a schedule to view</h2>
-    <form action="schedule.html" method="post">
+
+
+    <form action="php/schedule.php" method="post">
         <select name="schedule" style='padding: 7px'>
-            <option value="schedule1">Current Week</option>
-            <option value="schedule2">Next Week</option>
+            <option name="current" value="current">Current Week</option>
+            <option name="next" value="next">Next Week</option>
         </select>
-        <input type="submit" value="Submit" class='btn' style='padding:7px; height:initial; margin-top: 0px; margin-left:0px; color:white; background-color:
-        orangered'>
+        <input type="submit" value="Submit" class='btn' style='padding:7px; height:initial; margin-top: 0px; margin-left:0px; color:white; background-color:orangered'>
     </form>
 
     <h2>View Schedule</h2>

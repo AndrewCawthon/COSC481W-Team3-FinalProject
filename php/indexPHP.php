@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +54,7 @@ if (!empty($employeeID) && !empty($password)) {
             //JS alert to say login successful
             echo '<script language="javascript">alert("Login Successful!");</script>';
             //redirect to mainEmployeePortal.html
-            header("Location: ../mainEmployeePortalPage.html");
+            header("Location: ../mainEmployeePortalPage.php");
             $conn = null;
         }
         else {
@@ -67,6 +67,16 @@ if (!empty($employeeID) && !empty($password)) {
         $conn = null;
     }
 }
+
+//check if the login button was pressed and query the database to get the employeeID from the table where the inputted username and password match and store it in a session variable
+if (isset($_GET['login'])) {
+    $sql = "SELECT employeeID FROM employees WHERE username = '$employeeID' AND password = '$password'";
+    $result = $conn->query($sql);
+    $row = $result->fetch();
+    //add the employeeID to the session variable
+    $_SESSION['employeeID'] = $row['employeeID'];
+}
+
 ?>    
 </body>
 </html>

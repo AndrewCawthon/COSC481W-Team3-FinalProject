@@ -24,7 +24,7 @@
 			-->
             <input type="password" name="password" class="form__input" autofocus="" placeholder="New Password"> <br><br>
             <input type="submit" name="submit" id ="setpass" class = "inputStyle" value="Set password & Login"><br><br>
-            <a class="form__link" href="../index.html">Not a First Time User?</a>       
+            <!--<a class="form__link" href="../index.html">Not a First Time User?</a>-->       
         </form>
     </div>
     <div class = "FAQ">
@@ -38,33 +38,33 @@ $conn = new PDO("sqlsrv:server = tcp:test-server-seniorproject.database.windows.
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if (isset($_GET['submit'])) {
-//get the employeeID and password from the form
-    $employeeID = $_GET['employeeID'];
+    //get the employeeID and password from the form
+    $username = $_GET['username'];
     $password = $_GET['password'];
 
     //check if the employeeID and password fields are empty
-    if (empty($employeeID) || empty($password)) {
+    if (empty($username) || empty($password)) {
     echo '<script language="javascript">alert("Please enter your ID and password!");</script>';  
     }
 
     //check if the employeeID and password fields are not empty
-    else if (!empty($employeeID) && !empty($password)) {
+    else if (!empty($username) && !empty($password)) {
         //query the database to see if the user exists
-        $sql = "SELECT * FROM employees WHERE username = '$employeeID'";
+        $sql = "SELECT * FROM employees WHERE username = '$username'";
         $result = $conn->query($sql);
         $row = $result->fetch();
         //if the user exists, print a JS alert and redirect to the login page
         if ($row) {
-            echo '<script language="javascript">alert("User already exists! Please login.");</script>';
-            echo '<script language="javascript">window.location.href = "../index.html";</script>';
+            echo '<script language="javascript">alert("User already exists! Please create a new user.");</script>';
+            echo '<script language="javascript">window.location.href = "../welcomeToTheManagerPortalPage.html";</script>';
             $conn = null;
         }
         //if the user does not exist, insert the user into the database and redirect to the login page
         else {
-            $sql = "INSERT INTO employees (username, password) VALUES ('$employeeID', '$password')";
+            $sql = "INSERT INTO employees (username, password) VALUES ('$username', '$password')";
             $conn->exec($sql);
-            echo '<script language="javascript">alert("User created! Please login.");</script>';
-            echo '<script language="javascript">window.location.href = "../index.html";</script>';
+            echo '<script language="javascript">alert("User created!");</script>';
+            echo '<script language="javascript">window.location.href = "../welcomeToTheManagerPortalPage.html";</script>';
             $conn = null;
         }
     }
