@@ -5,10 +5,15 @@
 }
 
 body {
-  background-color: #ff9a3c;
+  
+  
   width: 100vw;
   height: 100vh;
-  background-image: url('background-img.jpg');
+  background-image: url('../backgroungimage.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-color: #ff9a3c;
   background-size: cover;
   background-position: center, center;
 }
@@ -65,6 +70,20 @@ h2 {
 }
 .btn:hover {
   transform: translateY(-10px);
+}
+
+.logout{
+  position: relative;
+  margin-right: 2%;
+}
+
+.logout-btn{
+  background-color: #ffdb4e;
+  border: none;
+  padding: 0.1%;
+  position: absolute; 
+  top: 0; 
+  right: 0;
 }
 
 /* Back Button */
