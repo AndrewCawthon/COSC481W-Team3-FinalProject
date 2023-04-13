@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <html>
     <head>
-    <title>Delete Employees</title>
+    <title>Employee Schedule</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <style>
         *{
@@ -41,7 +41,7 @@
         <form action="../mainEmployeePortalPage.html" method="post">
             <input type="submit" name="back" value="Back">
         </form>
-        <form action="viewSchedules.php" method="post">
+        <form action="viewSchedulesEmp.php" method="post">
             <input type="text" name="id" placeholder="Employee ID">
             <input type="submit" name="submit" value="Submit">
         </form> 
