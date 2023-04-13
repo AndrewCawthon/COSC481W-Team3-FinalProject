@@ -13,7 +13,7 @@
 </head>
 <body>	
     <div class="main">
-        <form class="form" id="loginForm" method="get" action="index.php">
+        <form class="form" id="loginForm" method="post" action="index.php">
             <h1 class="page_title">Login to Employee Portal</h1>
             <input type="password" class="form__input" id="employeeID" name="employeeID" autofocus="" placeholder="Employee ID"> <br><br>
             <input type="text" class="form__input" id="username" name="username" autofocus="" placeholder="Username"> <br><br>
@@ -21,7 +21,7 @@
             <input type="submit" id="login" name="login" class="inputStyle" value="LogIn"> <br><br>   
             <a href="ResetPassword.html" class="form__link">Forgot your password?</a> <br><br>
             <!-- <a class="form__link" href="firstLogIn.html" id="linkFirstTime">First Time User?</a><br> <br> -->
-            <a class="form__link" href="adminLogIn.php" id="linkAdminLogin">Admin Login</a>
+            <a class="form__link" href="adminLogin.php" id="linkAdminLogin">Admin Login</a>
         </form>
     </div>
     <div class = "FAQ">
@@ -34,11 +34,11 @@ $conn = new PDO("sqlsrv:server = tcp:test-server-seniorproject.database.windows.
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 //check if the login button was pressed
-if (isset($_GET['login'])) {
+if (isset($_POST['login'])) {
     //code to get the username, id, and password from the form 
-    $employeeID = $_GET['employeeID'];
-    $username = $_GET['username'];
-    $password = $_GET['password'];
+    $employeeID = $_POST['employeeID'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
     //code to check if the username, id, and password are in the database
     $sql = "SELECT * FROM employees WHERE employeeID = '$employeeID' AND username = '$username' AND password = '$password'";

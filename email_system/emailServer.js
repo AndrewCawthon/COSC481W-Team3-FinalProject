@@ -1,9 +1,12 @@
+// Author: Nathan Zimmer
+// nodejs webserver that sends email notifcations to workers when their time off is approved or denied
 import { WebSocketServer } from "ws";
 import { createTransport } from 'nodemailer';
 
 const port = 18083; 
 const server = new WebSocketServer({ port: port });
 
+// starts server and waits for connections
 function main() {
     server.on("connection", (socket) => {
         console.log(`Connected to client`);
