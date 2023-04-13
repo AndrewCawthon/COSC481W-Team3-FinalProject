@@ -21,7 +21,7 @@
             <input type="submit" id="login" name="login" class="inputStyle" value="LogIn"> <br><br>   
             <a href="ResetPassword.html" class="form__link">Forgot your password?</a> <br><br>
             <!-- <a class="form__link" href="firstLogIn.html" id="linkFirstTime">First Time User?</a><br> <br> -->
-            <a class="form__link" href="adminLogIn.php" id="linkAdminLogin">Admin Login</a>
+            <a class="form__link" href="adminLogin.php" id="linkAdminLogin">Admin Login</a>
         </form>
     </div>
     <div class = "FAQ">
