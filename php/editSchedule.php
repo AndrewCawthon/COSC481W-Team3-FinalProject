@@ -3,6 +3,38 @@
     <head>
     <title>Edit Schedules</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *{
+            text-decoration: none;
+            padding: 5;
+        }
+        a {
+            color: blue;
+			text-decoration: underline;
+        }
+		a:hover {
+			text-decoration: none;
+		}
+        header{
+            height: 70px;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 1px black solid;
+            background-color: rgb(252, 251, 251);
+        }
+        .imgs{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        td {
+            padding-right: 10px;
+            text-align: center;
+        }
+        @media screen and (max-width: 480px) {}  
+    </style>
     </head>
     <body>
         <form action="editSchedule.php" method="post">
@@ -31,7 +63,7 @@ if (isset($_POST['submit'])) {
     //display the results in an HTML table with a checkbox next to each row
     //put the checkbox in a form so that the user can select multiple rows
     echo "<form action='editSchedule.php' method='post'>";
-    echo "<table border='1'>";
+    echo "<table border='1' bgcolor='beige'>";
     echo "<tr><th>Employee ID</th><th>Work Date</th><th>Start Time</th><th>End Time</th><th>Accept</th><th>Deny</th></tr>";
     foreach ($result as $row) {
         echo "<tr><td>".$row['employeeID']."</td><td>".$row['work_date']."</td><td>".$row['start_work_hour']."</td><td>".$row['end_work_hour']."</td><td><input type='checkbox' name='accept[]' value='".$row['work_date']."'></td><td><input type='checkbox' name='deny[]' value='".$row['work_date']."'></td></tr>";

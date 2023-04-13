@@ -38,7 +38,7 @@
     <link rel='stylesheet' href='./style.css'>
     </head>
     <body>
-        <form action="../welcomeToTheManagerPortalPage.html" method="post">
+        <form action="../mainEmployeePortalPage.html" method="post">
             <input type="submit" name="back" value="Back">
         </form>
         <form action="viewSchedules.php" method="post">

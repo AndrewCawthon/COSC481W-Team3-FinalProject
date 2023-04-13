@@ -42,6 +42,9 @@ if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    //put employeeID into session
+    $_SESSION['employeeID'] = $employeeID;
+
     //code to check if the username, id, and password are in the database
     $sql = "SELECT * FROM employees WHERE employeeID = '$employeeID' AND username = '$username' AND password = '$password'";
     $result = $conn->query($sql);
