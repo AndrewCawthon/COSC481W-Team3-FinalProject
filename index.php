@@ -32,6 +32,8 @@
 //connect to the mssql database
 $conn = new PDO("sqlsrv:server = tcp:test-server-seniorproject.database.windows.net,1433; Database = test", "mainLogin", "AdminUser42!");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//remote access
+
 
 //check if the login button was pressed
 if (isset($_POST['login'])) {

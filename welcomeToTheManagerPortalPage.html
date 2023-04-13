@@ -65,14 +65,16 @@
 <body>
     <h2>User Options</h2>
     <h1 id="h1">Welcome to the Manager Portal</h1>
-        <button  onclick="location.href = 'index.php'">Logout</button>
+    <div class="mainButton" style='display: flex; justify-content: space-between; width: 70%; margin: 0px auto; margin-top:-50px;'>
+        <button  class="btn button" onclick="location.href = 'index.php'">Logout</button>
+    </div>
     <div class="mainButton" style='display: flex; justify-content: space-between; width: 70%; margin: 0px auto; margin-top:-50px;'>
         <button class="btn button manageemployeesbutton" onclick="location.href = 'manageEmp.html'">Manage Employees</button>
-        <button class="btn button viewemployeesavailabilitiesbutton" onclick="location.href = 'adminAvails.html'">View Employee's Availabilities</button>
+        <button class="btn button viewemployeesavailabilitiesbutton" onclick="location.href = 'php/viewSchedules.php'">View Employee's Schedules</button>
     </div>
     <div style='display: flex; justify-content: space-between; width: 70%; margin: 0px auto;'>
-        <button class="btn button viewtimeoffrequestsbutton" onclick="location.href = 'adminRequests.html'">View (Pending) Time Off</button>
-        <button class="btn button editpublishschedulesbutton" onclick="location.href = 'managerSchedule.html'">Edit or Publish Schedules</button>
+        <button class="btn button viewtimeoffrequestsbutton" onclick="location.href = 'php/editSchedule.php'">View (Pending) Time Off</button>
+        <button class="btn button editpublishschedulesbutton" onclick="location.href = 'scheduleImg.php'">Edit or Publish Schedules</button>
     </div>
     <h3 class="right">
         <a href="FAQ.html">FAQ</a>

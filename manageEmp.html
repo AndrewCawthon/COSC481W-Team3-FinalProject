@@ -10,7 +10,7 @@
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 
-<body onload="loadEmployees()">
+<body>
 
   <div class="container">
 
@@ -42,7 +42,12 @@
           </div>
 
         </div>
-        <button class="btn" id="addnewemployee"onclick="openAdd()"><h1>Add New <br>Employee</h1></button>
+        <form action="firstLogin.html" method="post">
+          <input class="btn" type="submit" name="submit" value="Add Employee"/>
+        </form>
+        <form action="php/viewEmployees.php" method="post">
+          <input class="btn" type="submit" name="submit" value="Delete Employee"/>
+        </form>
       </div>
     </div>
   </div>

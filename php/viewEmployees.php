@@ -1,7 +1,7 @@
 <html>
     <title>All Employees</title>
     <body>
-        <form action="../manageEmp.html" method="post">
+        <form action="../welcomeToTheManagerPortalPage.html" method="post">
             <input type="submit" name="back" value="Back">
         </form>
         <form action="viewEmployees.php" method="post">

@@ -1,9 +1,12 @@
 <html>
     <head>
-    <title>Employee Schedules</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Delete Employees</title>
+    <link rel="stylesheet" href="../style.css">
     </head>
     <body>
+        <form action="../welcomeToTheManagerPortalPage.html" method="post">
+            <input type="submit" name="back" value="Back">
+        </form>
         <form action="viewSchedules.php" method="post">
             <input type="text" name="id" placeholder="Employee ID">
             <input type="submit" name="submit" value="Submit">
